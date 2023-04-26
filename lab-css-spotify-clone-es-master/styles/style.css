@@ -27,13 +27,14 @@ h3{
 }
 
 .flex-box-nav{
-    border: solid rgba(0, 0, 0, 0.258);
+    position: fixed;
     background-color: white;
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    height: 120px;
     padding: 0px 50px;
+    width: 100%;
+    transition: top 0.5s;
 }
 
 .flex-box-nav img{
@@ -41,11 +42,17 @@ h3{
 }
 
 .flex-box-list{
+    margin-right: 120px;
     display: flex;
     font-size: 30px; 
     list-style: none;
     gap: 45px;
     font-size: 1.3em;
+}
+
+.flex-box-list a{
+    color: black;
+    text-decoration: none;
 }
 
 .background-image{
@@ -82,7 +89,8 @@ h3{
 
 .section-title h2{
     border-bottom: solid 4px #00B172;
-    margin: 0px 520px;
+    margin: 0px 590px;
+    padding: 20px 0px 5px 0px;
     display: flex;
     justify-content: center;
 }
@@ -112,8 +120,10 @@ h3{
 
 }
 .flex-box-section-text p{
-    width: 200px;
+    width: 250px;
     text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
 }
 
 .section-app{
@@ -137,14 +147,20 @@ h3{
 }
 
 .section-app-text h2{
-    width: 700px;   
+    
+    border-bottom: solid 4px rgb(255, 255, 255);
+    padding: 0px 0px 20px 0px;   
 }
 
 
 .section-app-text--text{
+    padding-top: 20px;
     width: 350px;
-    font-weight: 300;
-    font-size: 1.4em ;
+    font-weight: 300;    
+}
+
+.section-app-text--text p{
+    font-size: 1.3em;   
 }
 
 .section-app-image{
