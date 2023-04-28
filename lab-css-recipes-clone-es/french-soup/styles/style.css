@@ -23,26 +23,19 @@ h1{
 
 hr{
     margin-top: 50px;
-    width: 1000px
+    width: 950px
 }
 
 /* header */
 
 .header{
     display: flex;
-    
     justify-content: center;
-}
-
-.header h1{
-    position: absolute;
-    padding: 150px 0px 0px 180px;
-}
-
-.header img{   
-    width: 1400px;
-    height: 700px;
-    object-fit: cover;    
+    align-items: center;
+    background-image: url(../images/soup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
 }
 
 /* section1 */
@@ -53,32 +46,38 @@ hr{
     flex-direction: column;
     align-items: center;
     
+    
 }
 
 .section1 p{
    font-weight: 200;
    font-size: 25px;
-   width: 1000px;   
+   padding: 0px 280px 0px 280px; 
+   font-weight: 300;
 }
 
 .section1 img{
-    width: 550px;
-    padding-right: 50px;
+    padding-top: 20px;
+    width: 500px;
 }
 
 /* section2 */
 
 .section2{    
-    padding-top: 50px;
-    display: grid;
-    place-content: center;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 280px 0px 280px;    
 }
 
 .section2 li{
-    padding-right: 550px;
+    padding-right: 400px;
     list-style: none;
+    left: 180px;
     font-size: 20px;
 }
+
+
 
 .section2 img{
     width: 550px;
@@ -86,16 +85,20 @@ hr{
     padding-top: 30px;
 }
 
+
 /* section3 */
 
 .section3{
-    display: grid;
-    place-content: center;
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 280px 100px 280px;
+    
 }
 
-.section3-text p{
-    font-size: 23px;
-    width: 1000px;
-    padding-bottom: 50px;   
+.section3-text ol{
+    font-size: 22px;
+    
+    
 }
+

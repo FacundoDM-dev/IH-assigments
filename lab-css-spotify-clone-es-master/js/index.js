@@ -1,11 +1,22 @@
-let principalUbicacion = window.pageYOffset;
-window.onscroll = function() {
-    let despUbicacion = window.pageYOffset;
-    if(principalUbicacion >= despUbicacion){
-    document.getElementById ('fixed-nav').style.top = '0';
-    }
-    else{
-        document.getElementById ('fixed-nav').style.top = '-100px';
-    }
-    principalUbicacion = despUbicacion;
-}
+console.log("PracticandoJS");
+
+let comidaFavorita;
+
+comidaFavorita = "Asadito";
+
+console.log(comidaFavorita);
+
+comidaFavorita = "Raviolis"
+
+console.log(comidaFavorita);
+
+console.log(comidaFavorita, typeof comidaFavorita);
+
+comidaFavorita = 20;
+
+console.log(comidaFavorita, typeof comidaFavorita);
+
+const nombre = "Facundo"
+
+console.log(nombre);
+
