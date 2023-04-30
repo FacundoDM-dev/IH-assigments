@@ -63,11 +63,12 @@ h3{
 
 .flex-box-list a{
     color: black;
+    text-decoration: none;
 }
 
 .flex-box-list a:hover{
     color: #00B172;
-    text-decoration: none;
+    
 }
 
 /* ESTILOS HEADER */
@@ -110,7 +111,7 @@ h3{
     text-align: center;
     text-decoration: underline #00B172 ;
     text-underline-offset: 15px;
-    margin: 0px 590px;
+   
     padding: 20px 0px 5px 0px;
 }
 
