@@ -48,8 +48,10 @@ let nombreFacundoReverse = nombreFacundo
   .split("")
   .reverse("")
   .join("")
-  .toUpperCase("");
 console.log(nombreFacundoReverse);
+
+
+
 
 let ordenLexico = [hacker1, hacker2];
 
@@ -61,6 +63,9 @@ ordenLexico.sort((a, b) => {
   }
   return console.log("Yo, el navegador va primero definitivamente.");
 });
+
+
+
 
 // Bonus 1
 
