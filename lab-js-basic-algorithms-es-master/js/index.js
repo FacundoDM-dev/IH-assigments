@@ -6,7 +6,16 @@ let nombreConductor = `El nombre del conductor es ${hacker1}`;
 let nombreNavegador = `El nombre del navegador es ${hacker2}`;
 console.log(nombreConductor);
 console.log(nombreNavegador);
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteración 2: Condicionales
 
 if (hacker1.length > hacker2.length) {
@@ -34,7 +43,16 @@ if (hacker1.length > hacker2.length) {
 //   : hacker1.length === hacker2.length
 //   ? console.log(`¡Vaya, ambos tienen nombres igual de largos, XX caracteres!`)
 //   : `Parece que el navegante tiene el nombre más largo, tiene ${hacker2.length} caracteres.`;
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteración 3: Loops
 
 let nombreFacundo = "";
@@ -52,7 +70,6 @@ console.log(nombreFacundoReverse);
 
 
 
-
 let ordenLexico = [hacker1, hacker2];
 
 ordenLexico.sort((a, b) => {
@@ -63,10 +80,16 @@ ordenLexico.sort((a, b) => {
   }
   return console.log("Yo, el navegador va primero definitivamente.");
 });
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Bonus 1
 
 // Variable que contiene una string con 3 parrafos
@@ -88,7 +111,7 @@ let numeroLorem = loremPalabras.length;
 
 console.log(`loremIpsum tiene ${numeroLorem} palabras.`);
 
-// Para determinar cuantas palabras "et" hay dentro del parraf  o use una iteriacion for of comparando mi nueva variable word con la palabra "et"
+// Para determinar cuantas palabras "et" hay dentro del parrafo use una iteriacion for of comparando mi nueva variable word con la palabra "et"
 // consiguendo
 
 let contador = 0;
@@ -102,7 +125,16 @@ for (word of loremPalabras) {
 console.log(contador);
 
 console.log(`El texto loremipsum tiene ${contador} palabras "et" `);
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Bonus 2
 
 let phrasesToCheck = [

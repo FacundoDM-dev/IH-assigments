@@ -11,13 +11,22 @@ function maxOfTwoNumbers(numero1, numero2) {
 
 let resultado = maxOfTwoNumbers(100, 80);
 console.log(resultado); 
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #2: Find longest word
 
-// const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
 console.log("---- iteracion N2 ----");
 
-const words = ["one", "house", "crocodile", "end"]
+const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
 function findLongestWord(words) {
   let longitudMaximaHastAhora = 0;
@@ -35,8 +44,16 @@ function findLongestWord(words) {
 
 let palabraMasLarga = findLongestWord(words)
 console.log(palabraMasLarga); 
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #3: Calculate the sum
 
 console.log("---- iteracion N3 ----");
@@ -55,10 +72,16 @@ function sumNumbers(arraySuma) {
 
 let sumaGrande = sumNumbers(numbers);
 console.log(sumaGrande);
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #3.1 Bonus:
 
 console.log("---- iteracion Bonus N3.1 ----");
@@ -85,7 +108,16 @@ function sum(arrayMixto) {
 
 let resultadoSumaDeTodo = sum(mixedArr)
 console.log(resultadoSumaDeTodo);
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 
@@ -119,30 +151,28 @@ function averageWordLength(array) {
 
 let promedioPalabras = averageWordLength(wordsArr);
 console.log(promedioPalabras);
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Bonus - Iteration #4.1
-
-
-
 function avg() {}
- 
-
-
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #5: Unique arrays
 console.log("---- iteracion N5 ----");
 
@@ -175,11 +205,16 @@ return derecha
 
 let resultado2 = uniquifyArray(wordsUnique)
 console.log(resultado2);
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #6: Find elements
 
 console.log("---- iteracion N6 ----");
@@ -196,17 +231,16 @@ function doesWordExist(arrayBuscador, palabraBuscada){
 
 let buscadorPalabra = doesWordExist(wordsFind, "machine")
 console.log(buscadorPalabra);
-
-
-
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #7: Count repetition
 
 console.log("---- iteracion N5 ----");
@@ -237,9 +271,16 @@ function howManyTimes(arrayVerificar, palabraVerificar) {
 
 let contadorDePalabrasRepetidas = howManyTimes(wordsCount, "matter")
 console.log(contadorDePalabrasRepetidas);
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // Iteration #8: Bonus
 
 const matrix = [
@@ -266,7 +307,16 @@ const matrix = [
 ];
 
 function greatestProduct() {}
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
 
