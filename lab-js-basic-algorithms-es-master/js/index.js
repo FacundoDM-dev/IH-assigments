@@ -1,4 +1,5 @@
 // Iteración 1: Nombres y entradas
+console.log("---- iteracion N1 ----");
 
 let hacker1 = "Facundo";
 let hacker2 = "Diego";
@@ -6,9 +7,7 @@ let nombreConductor = `El nombre del conductor es ${hacker1}`;
 let nombreNavegador = `El nombre del navegador es ${hacker2}`;
 console.log(nombreConductor);
 console.log(nombreNavegador);
-//
-//
-//
+
 //
 //
 //
@@ -17,6 +16,7 @@ console.log(nombreNavegador);
 //
 //
 // Iteración 2: Condicionales
+console.log("---- iteracion N2 ----");
 
 if (hacker1.length > hacker2.length) {
   console.log(
@@ -50,10 +50,8 @@ if (hacker1.length > hacker2.length) {
 //
 //
 //
-//
-//
-//
 // Iteración 3: Loops
+console.log("---- iteracion N3 ----");
 
 let nombreFacundo = "";
 
@@ -62,13 +60,8 @@ for (let index = 0; index < hacker1.length; index++) {
 }
 console.log(nombreFacundo);
 
-let nombreFacundoReverse = nombreFacundo
-  .split("")
-  .reverse("")
-  .join("")
+let nombreFacundoReverse = nombreFacundo.split("").reverse("").join("");
 console.log(nombreFacundoReverse);
-
-
 
 let ordenLexico = [hacker1, hacker2];
 
@@ -80,9 +73,7 @@ ordenLexico.sort((a, b) => {
   }
   return console.log("Yo, el navegador va primero definitivamente.");
 });
-//
-//
-//
+
 //
 //
 //
@@ -91,6 +82,7 @@ ordenLexico.sort((a, b) => {
 //
 //
 // Bonus 1
+console.log("---- BONUS N1 ----");
 
 // Variable que contiene una string con 3 parrafos
 
@@ -125,9 +117,7 @@ for (word of loremPalabras) {
 console.log(contador);
 
 console.log(`El texto loremipsum tiene ${contador} palabras "et" `);
-//
-//
-//
+
 //
 //
 //
@@ -136,6 +126,7 @@ console.log(`El texto loremipsum tiene ${contador} palabras "et" `);
 //
 //
 // Bonus 2
+console.log("---- BONUS N2 ----");
 
 let phrasesToCheck = [
   "Un hombre, un plan, un canal, ¡anamá!",
@@ -157,6 +148,3 @@ for (phrase of phrasesToCheck) {
     console.log(`${phrase} es un palindromo`);
   }
 }
-
-
-

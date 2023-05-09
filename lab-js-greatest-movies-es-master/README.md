@@ -1,28 +1,26 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# LAB | Las mejores películas de todos los tiempos
+# LAB | Greatest Movies of All Time
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_1561a196c2e3852533bad64d9b0d4e9f.gif)
 
-## Introducción
+## Introduction
 
-Acabamos de aprender algunos métodos útiles, que nos ayudarán a manipular **objetos y arrays**. En este ejercicio, practicaremos el trabajo con estos métodos, y deberás utilizar al menos uno de ellos en cada iteración.
+We have just learned some useful methods, that will help us manipulate **objects and arrays**. In this exercise, we will practice working with these methods, and you are required to use at least one of them in each iteration.
 
-La mejor manera de practicar es trabajar con datos reales. En el archivo **`src/data.js`**, encontrarás un array con información sobre **las 250 mejores películas de todos los tiempos** según el [ranking de IMDB](http://www.imdb.com/chart/top?ref\_=nv_mv\_250\_6) que utilizarás para mostrar lo que te pide cada iteración. :muscle:
+<br>
 
-<br/>
+## Requirements
 
-## Requisitos
+- Fork this repo.
+- Clone this repo.
+- Practice JavaScript advanced methods (`map`, `reduce`, `filter` and `sort` to manipulate arrays).
 
-- Haz un fork de este repo.
-- Clona este repo.
-- Practica los métodos avanzados de JavaScript`(map`, `reduce`, `filter` y `sort` para manipular arrays).
+<br>
 
-<br/>
+## Submission
 
-## La presentación	
-
-- Al terminar, ejecuta los siguientes comandos:
+- Upon completion, run the following commands:
 
 ```bash
 $ git add .
@@ -30,179 +28,516 @@ $ git commit -m "Solved lab"
 $ git push origin master
 ```
 
-- Crea un Pull Request para que tus TAs puedan comprobar tu trabajo.
+- Create a Pull Request so that your TAs can check your work.
 
-<br/>
+<br>
 
-## Introducción
+## Test Your Code
 
-El `src/data.js` contiene un array de 250 películas. Es un array de 250 _objetos_ que contienen la información de cada película. Aquí hay un ejemplo de cómo se muestran los datos:
+This LAB is equipped with unit tests to provide automated feedback on your lab progress. In case you want to check the tests, they are in the `tests/movies.spec.js` file.
+
+To run the tests and your JavaScript code, open the `SpecRunner.html` file using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VSCode extension.
+
+To see the outputs of the `console.log` in your JavaScript code, open the [Console in the Developer Tools](https://developer.chrome.com/docs/devtools/open/#console).
+
+<br>
+
+## Instructions
+
+You will work on the `src/movies.js` file, which is already loaded in the `SpecRunner.html` file.
+
+The `src/data.js` file containing the array of movies is also loaded in the `SpecRunner.html` file.
+
+<br>
+
+## Iteration 0: Movies array
+
+The best way to practice is to work with real data. In the **`src/data.js`** file, you will find an array of info about **the best 250 movies of all times** according to [IMDB Ranking](http://www.imdb.com/chart/top?ref_=nv_mv_250_6) that you will use to display what each iteration asks! 
+
+Here is an example of how the data is displayed:
 
 ```javascript
 {
-  "title":"The Shawshank Redemption",
-  "year":1994,
-  "director":"Frank Darabont",
-  "duration":"2h 22min",
-  "genre":["Crime","Drama"],
-  "score":9.3
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": "2h 22min",
+  "genre": ["Crime","Drama"],
+  "score": 9.3
 }
 ```
 
-Se profundizará en algunos "datos" que tiene este conjunto de datos. Por ejemplo, podemos utilizar este conjunto de datos para encontrar cuál es la película más popular, cuál es la duración media de la película, la lista de películas de algún director, etc.Bien, ahí viene tu reto. En las próximas iteraciones, utilizarás tus conocimientos de JS para manipular estos datos.
+You will be digging deeper into some "facts" that this data set has. For example, we can use this data set to find which is the most popular movie, what is the average duration of the movie, the list of movies by some director, etc. 
 
-Recuerda leer cuidadosamente la descripción de cada iteración antes de trabajar en la solución.
+In this iteration, no action is required, but here comes your challenge: In the following iterations, you will use your JS knowledge to manipulate this data.
 
-<br/>
+Remember to read each iteration description carefully before working on the solution.
 
-## Instrucciones
+<br>
 
-Trabajarás en el archivo `src/movies.js`, que ya está cargado en el archivo `index.html`.
+### Iteration 1: All directors
 
-El archivo `src/data`.js que contiene la matriz de películas también se carga en el archivo `index.html`.
+We need to get the array of all directors. Since this is a warm up, we will give you a hint: you have to _map_ through the array of movies and get all the directors into one array as a final result. Go ahead and create a function named `getAllDirectors()` that receives an array of movies as an argument and returns a new (_mapped_) array.
 
-Para ejecutar el código JavaScript, abra el archivo `index.html` utilizando la extensión VSCode [de Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+<br>
 
-Para ver la salida del código JavaScript, abra la [consola en las herramientas de desarrollo](https://developer.chrome.com/docs/devtools/open/#console).
+#### Bonus - Iteration 1.1: _Clean_ the array of directors
 
-<br/>
+It seems some of the directors had directed multiple movies so they will pop up multiple times in the array of directors. How could you "clean" a bit this array and make it unified (meaning, without duplicates)? _Don't prioritize the bonus part now, you can come back to it when you are done with the mandatory iterations._ :wink:
 
-<hr/>
+<br>
 
-### Nota sobre las pruebas
+### Iteration 2: Steven Spielberg. The best?
 
-Este LAB está equipado con pruebas unitarias para proporcionar información automatizada sobre el progreso de su laboratorio.
+One of the most famous directors in cinema is **[Steven Spielberg](https://en.wikipedia.org/wiki/Steven_Spielberg)**, and he has some really awesome drama movies that are on our list, but we want to know how many of them are there.
 
-**Después de completar las iteraciones básicas**, vaya a la sección **"Pruebe su código"** en la parte inferior. Allí se le pedirá que instale las dependencias de prueba y ejecute las pruebas para comprobar cuántas pruebas pasa su código. Una vez que ejecute las pruebas, corrija su código para pasar las pruebas que fallan.
+Go ahead and create a `howManyMovies()` function that receives an array as a parameter and `filter` :eyes: the array so we can have only the **drama** movies where **Steven Spielberg** is the director.
 
-<br/>
+<br>
 
-### Iteración 1: Todos los directores
+### Iteration 3: All scores average
 
-Necesitamos obtener el array de todos los directores. Como esto es un calentamiento, te daremos una pista: tienes que _mapear_ a través del array de películas y obtener todos los directores en un array como resultado final. Adelante, crea una función llamada `getAllDirectors()` que reciba un array de películas como argumento y devuelva un nuevo (array _mapeado_).
+These are the best movies based on their scores, so supposedly all of them have a remarkable score. In this iteration, we want to know the average score of all of them and display it on the console. Create a `scoresAverage()` function that receives an array as a parameter and solves the challenge.
 
-<br/>
+The score must be returned rounded to 2 decimals!
 
-#### Bonus - Iteración 1.1: _Limpiar_ la matriz de directores
+**:bulb: Maybe you want to _"reduce"_ the data to a single value. :wink:**
 
-Parece que algunos de los directores han dirigido varias películas por lo que aparecerán varias veces en el array de directores. ¿Cómo podrías "limpiar" un poco esta matriz y hacerla unificada (es decir, sin duplicados)? No _le des prioridad a la parte de los bonos ahora, puedes volver a ella cuando termines con las iteraciones obligatorias._ :wink:
+<br>
 
-<br/>
+### Iteration 4: Drama movies
 
-### Iteración 2: Steven Spielberg. ¿El mejor?
+Drama is the genre that repeats the most on our `array`. Apparently, people love drama! :eyes:
 
-Uno de los directores más famosos del cine es  **[Steven Spielberg](https://en.wikipedia.org/wiki/Steven_Spielberg)**, y tiene algunas películas dramáticas realmente impresionantes que están en nuestra lista, pero queremos saber cuántas hay.
+Create a `dramaMoviesScore()` function that receives an array as a parameter to get the average score of all drama movies! Let's see if it is better than the general average.
 
-Creemos una función `howManyMovies()` que reciba un array como parámetro y `filter` :eyes: el array para que tengamos sólo las películas de **drama** donde  **Steven Spielberg** es el director.
+Again, rounded to 2 decimals!
 
-<br/>
+<br>
 
-### Iteración 3: Todas las puntuaciones son promedio
+### Iteration 5: Order by year
 
-Estas son las mejores películas en base a sus puntuaciones, por lo que se supone que todas ellas tienen una puntuación notable. En esta iteración, queremos conocer la puntuación media de todas ellas y mostrarla en la consola. Crea una función `scoresAverage()` que reciba un array como parámetro y resuelva el reto.
-
-La puntuación debe devolverse redondeada a 2 decimales.
-
-**:bulb: Tal vez quieras _"reduce"_ los datos a un solo valor. :wink**:
-
-<br/>
-
-### Iteración 4: Películas de drama
-
-El drama es el género que más se repite en nuestra `array`. Al parecer, ¡la gente adora el drama! :eyes:
-
-Crea una función `dramaMoviesScore()` que reciba un array como parámetro para obtener la puntuación media de todas las películas de drama. Veamos si es mejor que la media general.
-
-De nuevo, ¡redondeado a 2 decimales!
-
-<br/>
-
-### Iteración 5: Ordenar por año
-
-Tenemos que ordenar las películas en orden ascendente según su año de estreno. Esto debería ser fácil utilizando uno de los **métodos** que acabamos de aprender. :wink:Crea una función `orderByYear()` que reciba un array como parámetro y devuelva un _nuevo array ordenado_.
+We need to sort the movies in ascending order by their release year. This should be easy using one of the **methods** we have just learned. :wink:
+Create a function `orderByYear()` that receives an array as a parameter and returns a _new sorted array_.
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_3db351079827c0acba42cf1e397dd8a3.gif)
 
-Si dos películas tienen el mismo año, las ordena en orden alfabético por su título. :heavy:
+If two movies have the same year, order them in alphabetical order by their title! :heavy_check_mark:
 
-**:bulb: Asegúrate de no mutar el original del array :wink:**
+:warning: **Important:** Your function should *return a new array*, containing the movies ordered by the year. Your function should not modify (mutate) the original array. You may need to do some research on how to make a "copy" or "clone" an array.
 
-<br/>
+<br>
 
-### Iteración 6: Orden alfabético
+### Iteration 6: Alphabetic order
 
-Otra forma popular de ordenar las películas es ordenarlas alfabéticamente utilizando la clave `title`. Sin embargo, en este caso, sólo necesitamos imprimir el título de las 20 primeras. Muy fácil para un experto como tú. :wink:
+Another popular way to order the movies is to sort them alphabetically using the `title` key. However, in this case, we only need to print the title of the first 20. Easy peasy for an expert like you. :wink:
 
-Crea una función `orderAlphabetically()`, que reciba un array y devuelva un array de los 20 primeros títulos, ordenados alfabéticamente. Devuelve sólo el título de cada película, y si el array que recibe tiene menos de 20 películas, devuelve todas.
+Create an `orderAlphabetically()` function, that receives an array and returns an array of the first 20 titles, alphabetically ordered. Return only the title of each movie, and if the array you receive has less than 20 movies, return all of them.
 
-<br/>
 
-### BONUS - Iteración 7: Formato de tiempo
 
-Obtenemos la información de la página web **de IMDB**, pero la información de la duración se guardó en un formato que nos dificulta mucho la comparación de las películas.
+:warning: **Important:** Your function should *return a new array*, containing movie objects sorted alphabetically. Your function should not modify (mutate) the original array. You may need to do some research on how to make a "copy" or "clone" an array.
 
-Encontrar la película más larga es casi imposible usando ese formato, ¡así que vamos a cambiarlo!
+<br>
 
-- Crea una función `turnHoursToMinutes()` que reciba un array como parámetro, y con algo de _magia_ implementada por ti - reemplaza la información de duración de cada una de las películas por su equivalente en minutos. Por ejemplo:
+### BONUS - Iteration 7: Time format
 
-```javascript
-{
-  "title":"The Shawshank Redemption",
-  "year":1994,
-  "director":"Frank Darabont",
-  "duration":"2h 22min",
-  "genre":["Crime","Drama"],
-  "score":9.3
-}
-```
+We get the info from the **IMDB** web page, but the duration info was saved in a format that difficult us a lot to compare movies.
 
-Debería ser:
+Finding the longest movie is almost impossible using that format, so let's change it!
+
+- Create a `turnHoursToMinutes()` function that receives an array as a parameter, and with some _magic_ implemented by you - replaces the duration info of each of the movies for its equivalent in minutes. For example:
 
 ```javascript
 {
-  "title":"The Shawshank Redemption",
-  "year":1994,
-  "director":"Frank Darabont",
-  "duration":142,
-  "genre":["Crime","Drama"],
-  "score":9.3
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": "2h 22min",
+  "genre": ["Crime","Drama"],
+  "score" :9.3
 }
 ```
 
-Ten en cuenta que debes devolver un nuevo array con toda la información de las películas, es decir, no debes modificar el array original.
+Should be:
 
-<br/>
+```javascript
+{
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": 142,
+  "genre": ["Crime","Drama"],
+  "score": 9.3
+}
+```
 
-### BONUS - Iteración 8: Media de la mejor puntuación anual
+<br>
 
-Siempre oímos hablar mucho de las películas clásicas, pero queremos saber qué año tiene la mejor puntuación media, ¡para poder declarar oficialmente el **MEJOR AÑO DE CINE**!
+:warning: **Important:** Your function should *return a new array*, containing movie objects with the duration time in minutes. Your function should not modify (mutate) the original array.
 
-Crea la función `bestYearAvg()` que recibe un array de películas y nos da la respuesta de qué año fue el mejor para el cine y cuál fue su puntuación media. La función `bestYearAvg()` debe devolver una **string** con la siguiente estructura<br/>
+<br>
 
-**El mejor año fue con una puntuación media de .**
+### BONUS - Iteration 8: Best yearly score average
+
+We always hear so much about classic movies, but we want to know which year has the best average score, so we can declare the **BEST YEAR FOR CINEMA** officially!
+
+Go ahead and find which year have the best average score for the movies that were released in that year!
+Create `bestYearAvg()` function that receives an array of movies and gives us an answer to which year was the best year for cinema and what was its average score. The `bestYearAvg()` should return a **string** with the following structure:
+<br>
+
+**The best year was \<YEAR\> with an average score of \<RATE\>**
+
+<br>
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_dfc3fe557576abca4dba274e3aabe9a3.gif)
 
-<br/>
+<br>
 
-## Pruebe su código
+**Happy coding!** :blue_heart:
 
-¡Ah, sí! Ya tenemos nuestras pruebas, y ya sabes cómo funciona esto. Abre tu terminal, cambia de directorio a la raíz del laboratorio, y ejecuta `npm install` para instalar el ejecutor de pruebas. A continuación, ejecuta las pruebas ejecutando el comando `npm run test:watch`.
+<br>
 
-En resumen, los pasos son:
+## FAQs
 
-```shell
-$ cd lab-js-greatest-movies-es
-$ npm install
-$ npm run test:watch
-```
+<br>
 
-Y por último, abre el archivo `lab-solution.html` generado con la extensión VSCode "Live Server" para ver los resultados de las pruebas.
+<details>
+  <summary>I am stuck in the exercise and don't know how to solve the problem or where to start.</summary>
+  <br>
 
-Recuerda centrarte en una prueba cada vez y leer atentamente las instrucciones para entender lo que tienes que hacer.
 
-Las pruebas se encuentran en el archivo `tests/movies.spec.js`.
+  If you are stuck in your code and don't know how to solve the problem or where to start, you should take a step back and try to form a clear question about the specific issue you are facing. This will help you narrow down the problem and come up with potential solutions.
 
-<br/>
 
-**Feliz codificación!** :heart:
+  For example, is it a concept that you don't understand, or are you receiving an error message that you don't know how to fix? It is usually helpful to try to state the problem as clearly as possible, including any error messages you are receiving. This can help you communicate the issue to others and potentially get help from classmates or online resources. 
+
+
+  Once you have a clear understanding of the problem, you will be able to start working toward the solution.
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>All of the Jasmine tests are failing and in red. Why did this happen?</summary>
+  <br>
+
+
+  One possible reason why all of the Jasmine tests are failing is that there is a syntax error in the code being tested. If the code contains a syntax error, it will not be loaded properly and none of the tests will be able to run. This will cause all of the tests to fail.
+
+  To troubleshoot this issue, you will need to examine the code being tested for syntax errors. Look for missing brackets, semicolons, or other syntax issues that could be causing the problem. If you find a syntax error, correct it and try running the tests again.
+
+  Another possibility is that there is an issue with the tests. It is possible that you may have modified the test file and caused an issue. If you have made changes to the test file, try copying and pasting the original test file and running the tests again to see if this resolves the issue.
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>How do I loop over an array using the <code>forEach()</code> method?</summary>
+  <br>
+
+
+  The `forEach()` method executes a provided function once for each array element. It does not return a new array, but rather executes the function on each element in the array.
+
+  The syntax of the `forEach()` method is as follows:
+
+  ```js
+  array.forEach( function(element) {
+    // code to be executed for each element
+  });
+  ```
+
+  Here is an example that uses the `forEach()` method to log each element and its index in an array to the console:
+
+  ```js
+  const fruits = ["apple", "banana", "cherry"];
+
+  fruits.forEach( function(element, index) {
+    console.log(`${index}: ${element}`);
+  });
+  ```
+
+  You can also use an arrow function as the callback function for `forEach()`:
+
+  ```js
+  fruits.forEach((element, index) => {
+    console.log(`${index}: ${element}`);
+  });
+  ```
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>How to use the <code>filter()</code> array method?</summary>
+  <br>
+
+  The `filter()` method is used for iterating through an array and selecting only certain elements to include in a new array.
+
+  The `filter()` method returns a new array with all elements that pass a certain condition. The `filter()` method takes a callback function as an argument.
+
+  The callback function should return a boolean value (`true` / `false`) or a *truthy*/*falsy* value:
+
+  - If the callback function returns `true` for a particular element, that element will be included in the new array.
+  - If the callback function returns `false` for a particular element, that element will be excluded from the new array.
+
+  Here is an example of filtering an array to get a new array containing only students that have a course property of `"Web Dev"`:
+
+  ```js
+  const students = [
+    { name: "Anna", course: "Web Dev" },
+    { name: "Bill", course: "UX/UI" },
+    { name: "Cori", course: "Data" },
+    { name: "Dave", course: "Web Dev" },
+    { name: "Erin", course: "UX/UI" }
+  ];
+
+  const webDevStudents = students.filter( function(el) {
+    return el.course === "Web Dev";
+  });
+
+  console.log(webDevStudents);
+  // Output: 
+  // [ 
+  //   {name: "Anna", course: "Web Dev"},
+  //   {name: "Dave", course: "Web Dev"}
+  // ]
+  ```
+
+<br>
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>How to use the <code>map()</code> array method?</summary>
+  <br>
+
+  The `map()` method is used to create a new array by returning a value for each element in an array.
+
+  The `filter()` method takes a callback function as an argument. The `map()` method returns a new array containing the values returned from the callback function.
+
+  Here is an example of using the `map()` method to extract the `grade` property from each student object in the `students` array and create a new array with the grades:
+
+  ```js
+  const students = [
+    { name: "Anna", grade: 8 },
+    { name: "Bill", grade: 9 },
+    { name: "Cloe", grade: 7 }
+  ];
+
+  // Use map() to extract the 'grade' from each student object
+  const studentGrades = students.map(function (student) {
+    // Return the value to be included in the new array
+    return student.grade;
+  });
+
+
+  console.log(studentGrades); // Output: [8, 9, 7]
+  ```
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>How to use the <code>sort()</code> array method?</summary>
+  <br>
+
+  The `sort()` method is used to sort the elements of an array in place. This means that the original array is mutated and the sorted elements are rearranged within the same array.
+
+  The default sort order is based on converting the elements into strings and then comparing their sequences of UTF-16 Unicode values. This means that the `sort()` method can be used directly to sort an array of strings in alphabetical order.  However, when working with numbers, the default sort order may not produce the desired result and it is necessary to provide a sorting function as an argument to the `sort()` method.
+
+  #### Sorting numbers - ascending order
+
+  Here is an example of using the `sort()` method to sort an array of numbers in ascending order:
+
+  ```js
+  const numbers = [5, 2, 3, 1, 4];
+
+  numbers.sort((a, b) => a - b);
+
+  console.log(numbers); // Output: [1, 2, 3, 4, 5]
+  ```
+
+  <br>
+
+  #### Sorting numbers - ascending order
+
+  Here is an example of using the `sort()` method to sort an array of numbers in descending order:
+
+  ```js
+  const numbers = [5, 2, 3, 1, 4];
+
+  numbers.sort((a, b) => b - a);
+
+  console.log(numbers); // Output: [5, 4, 3, 2, 1]
+  ```
+
+  <br>
+
+  #### Sorting strings - ascending order A-Z
+
+  Here is an example of using the `sort()` method to sort an array of strings in ascending order (A-Z):
+
+  ```js
+  const words = ["cherry", "apple", "blueberry"];
+
+  words.sort((a, b) => a.localeCompare(b));
+
+  console.log(words); // Output: ["apple", "blueberry", "cherry"]
+  ```
+
+  The `localeCompare()` method is used to compare the strings in alphabetical order. In the above example `localeCompare()` method returns a negative value if `a` comes before `b` in the sort order, a positive value if `a` comes after `b`, and 0 if they are equal. This causes the strings to be sorted in ascending order (A-Z).
+
+  <br>
+
+  #### Sorting strings - descending order Z-A
+
+  Alternatively, you can use the default sort order by simply calling the `sort()` method without a compare function:
+
+  ```js
+  const words = ["cherry", "apple", "blueberry"];
+
+  words.sort();
+
+  console.log(words); // Output: ["apple", "blueberry", "cherry"]
+  ```
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>How to use the <code>reduce()</code> array method?</summary>
+  <br>
+
+  The `reduce()` method is used to reduce an array of values to a single value by adding each element to the accumulator.
+
+  <br>
+
+  #### Syntax
+
+  The `reduce()` method takes two arguments: a *callback function* and the *initial value*.
+
+  ```js
+  array.reduce((accumulator, element, index, array) => {}, initialValue);
+  ```
+
+  The callback function takes four arguments:
+
+  - `accumulator`: the accumulated value. The `accumulator` is initialized with the value passed as the second argument: `initialValue`.
+  - `element`: the current element being processed in the array
+  - `index`: *(optional)* the index of the current element being processed in the array
+  - `array`: *(optional)* the original array
+
+  <br>
+
+  #### Example
+
+  Here is an example of using the `reduce()` method to calculate the sum of all `grade` values in an array:
+
+  ```js
+  const students = [
+    { name: "John", grade: 8 },
+    { name: "Jane", grade: 9 },
+    { name: "Bob", grade: 7 }
+  ];
+
+  const gradesTotal = students.reduce((accumulator, element) {
+    // For each array element, add its 'grade' to the accumulator 
+    const newAccumulator = accumulator + element.grade;
+    // Return the new accumulator value for the next iteration
+    return newAccumulator;                              
+  }, 0);
+
+  console.log(gradesTotal); // Output: 24
+  ```
+
+  In the above example, the accumulator was initialized with the initial value of `0`.
+
+  The callback function adds the `grade` of the current element to the accumulator on each iteration. The returned value becomes the new accumulator value for the next iteration. The `reduce()` method returns the final value of the accumulator, which is the sum of all elements in the array.
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>How to use the <code>slice()</code> array method?</summary>
+  <br>
+
+  The `slice()` method is used to copy a portion of an array and return it as a new array. The  `slice()` method doesn't mutate the original array.
+
+  <br>
+
+  #### Syntax
+
+  ```js
+  const newArray = array.slice(start, end);
+  ```
+
+  - `start` is the index at which the slice begins.
+  - `end` is the index at which the slice ends.
+
+  <br>
+
+  The `slice()` method extracts elements from the original array and includes them in the new array up to, but not including, the `end` index. If the `end` index is not provided, the `slice()` method will extract elements from the `start` index to the *end of the original array*.
+
+
+
+  Here is an example of using the `slice()` method to copy array elements:
+
+  ```js
+  const strings = ["a", "b", "c", "d", "e"];
+
+  // Extract elements from index 1 to index 3
+  const slice = strings.slice(1, 3);
+
+  console.log(slice); // Output: ["b", "c"]
+  ```
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+<details>
+  <summary>I am unable to push changes to the repository. What should I do?</summary>
+  <br>
+
+
+  There are a couple of possible reasons why you may be unable to *push* changes to a Git repository:
+
+  1. **You have not committed your changes:** Before you can push your changes to the repository, you need to commit them using the `git commit` command. Make sure you have committed your changes and try pushing again. To do this, run the following terminal commands from the project folder:
+
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push
+   ```
+
+  2. **You do not have permission to push to the repository:** If you have cloned the repository directly from the main Ironhack repository without making a *Fork* first, you do not have write access to the repository.
+   To check which remote repository you have cloned, run the following terminal command from the project folder:
+
+   ```bash
+   git remote -v
+   ```
+
+  If the link shown is the same as the main Ironhack repository, you will need to fork the repository to your GitHub account first, and then clone your fork to your local machine to be able to push the changes.
+
+  Note: You may want to make a copy of the code you have locally, to avoid losing it in the process.
+
+  [Back to top](#faqs)
+  
+</details>
