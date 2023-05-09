@@ -56,8 +56,8 @@ function scoresAverage(moviesArray) {
     const numeroArray = totalScore[i];
     suma += numeroArray;
   }
-  let Average = suma / totalScore.length;
-  return parseFloat(Average.toFixed(2));
+  let average = suma / totalScore.length;
+  return parseFloat(average.toFixed(2));
 }
 let scoreTotal = scoresAverage(movies);
 console.log(scoreTotal);
@@ -85,8 +85,8 @@ function dramaMoviesScore(moviesArray) {
     const numeroArray = dramaMoviesScore[i];
     suma += numeroArray;
   }
-  let Average = suma / dramaMoviesScore.length;
-  return parseFloat(Average.toFixed(2));
+  let average = suma / dramaMoviesScore.length;
+  return parseFloat(average.toFixed(2));
 }
 let dramaMoviesScoreAverage = dramaMoviesScore(movies);
 console.log(dramaMoviesScoreAverage);
