@@ -1,0 +1,24 @@
+.container h1{
+    font-size: 20px;
+}
+
+@media (max-width: 500px){
+    .container h1{
+        font-size: 20px;
+        color: #e5a783;
+    }
+}
+
+@media (min-width:500px) and (max-width: 1000px){
+    .container h1{
+        font-size: 30px;
+        color: #2975c1;
+    }
+}
+
+@media (min-width: 1000px){
+    .container h1{
+        font-size: 40px;
+        color: #246e04;
+    }
+}

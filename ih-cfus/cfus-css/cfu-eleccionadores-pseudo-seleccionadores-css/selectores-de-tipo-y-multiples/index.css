@@ -1,0 +1,33 @@
+
+.blue-box{
+
+    color: blue
+
+}
+
+.yellow-box{
+
+    color: yellow;
+    
+}
+
+body{
+    background-color: #00D1AE;
+}
+
+.menu{
+    width: 400px;
+    height: 50px;
+    background-color: green;
+}
+
+.content{
+    width: 400px;
+    height: 50px;
+    background-color: red;
+}
+
+.important{
+    font-weight: bold;
+}
+

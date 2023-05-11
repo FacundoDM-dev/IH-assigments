@@ -1,0 +1,28 @@
+header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.AboutMe {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Paragraf {
+    box-sizing: content-box;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.Contact {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer {
+font-family: Arial, Helvetica, sans-serif;
+font-size: small;
+}
+
+.footer--image {
+    width: 30px;
+    height: 30px;
+}

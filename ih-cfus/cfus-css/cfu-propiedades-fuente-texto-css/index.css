@@ -1,0 +1,39 @@
+*{
+    font-family: Helvetica, sans-serif;
+}
+
+h1{
+    font-family: Helvetica, sans-serif;
+}
+
+p:nth-child(2){
+    font-size: 18px;
+    font-style: italic;
+}
+
+.visit{
+    font-weight: bold;
+}
+
+.ourweb h1{
+    text-transform: uppercase;
+}
+
+div{
+    text-align: center;
+}
+
+ul{
+    text-indent: 50px;
+    list-style: none;
+}
+
+ol{
+    line-height: 2.5em;
+    list-style: none;
+}
+
+li{
+    letter-spacing: 2px;
+}
+

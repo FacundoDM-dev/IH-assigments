@@ -1,0 +1,41 @@
+
+.list-order:nth-child(even){
+    color: yellow;
+}
+
+.list-order:nth-child(odd){
+    color:green
+}
+
+.list-order:first-child{
+    color: red;
+}
+.list-order:last-child{
+    color: blue;
+}
+
+.button{
+    color: black;
+    padding: 10px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: purple;
+    color: beige;
+    transition: 0.5s;
+    box-shadow: 2px, 2px, 2px, 2px; 
+}
+
+.bandera div:nth-child(odd) {
+    background-color: yellow;
+    color: yellow;
+}
+
+.bandera div:nth-child(even){
+    background-color: gray;
+    color: grey         ;
+}
