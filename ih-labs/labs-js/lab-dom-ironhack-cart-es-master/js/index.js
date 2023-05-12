@@ -12,6 +12,7 @@ const updateSubtotal = (product) => {
 };
 
 const calculateAll = () => {
+  
   // ITERATION 2
 
   const products = document.querySelectorAll('.product');
@@ -41,8 +42,8 @@ function createProduct() {
   let inputPrice = document.querySelector(".create-product input[type='number']");
   let tbody = document.querySelector('tbody');
   let newList = document.createElement('tr');
-  newList.innerHTML =   `<tr class="product">
-                        <td class="name">
+  newList.setAttribute("class", "product")
+  newList.innerHTML =   `<td class="name">
                         <span>${inputText.value}</span>
                         </td>
                         <td class="price">$<span>${inputPrice.value}</span></td>
@@ -52,13 +53,13 @@ function createProduct() {
                         <td class="subtotal">$<span>0</span></td>
                         <td class="action">
                         <button class="btn btn-remove">Remove</button>
-                        </td>
-                        </tr>`;
+                        </td>`;
   tbody.appendChild(newList);
+
   const removeBtn = document.querySelectorAll('.btn-remove');
   removeBtn.forEach((button) => {
-    button.addEventListener('click', removeProduct);
-    console.log(removeBtn)
+  button.addEventListener('click', removeProduct);
+    
   });
 }
 
@@ -69,7 +70,7 @@ window.addEventListener('load', () => {
   const removeBtn = document.querySelectorAll('.btn-remove');
   removeBtn.forEach((button) => {
     button.addEventListener('click', removeProduct);
-    console.log(removeBtn)
+
   });
   // for (let i = 0; i < removeBtn.length; i++) {
   //   const element = removeBtn[i];
