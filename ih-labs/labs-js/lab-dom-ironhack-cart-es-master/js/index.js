@@ -3,10 +3,10 @@
 const updateSubtotal = (product) => {
   let price = product.querySelector('.price span');
   let quantity = product.querySelector('.quantity input');
-  let subtotal = product.querySelector('.subtotal span');
+  let subTotal = product.querySelector('.subtotal span');
 
-  const calculate = price.innerText * quantity.value;
-  const result = (subtotal.innerText = calculate);
+  const calculate = (price.innerText) * quantity.value;
+  const result = (subTotal.innerText) = calculate;
 
   return result;
 };
@@ -40,24 +40,24 @@ const removeProduct = (event) => {
 const createProduct = () => {
   let inputText = document.querySelector(".create-product input[type='text']");
   let inputPrice = document.querySelector(".create-product input[type='number']");
-  let tbody = document.querySelector('tbody');
   let newList = document.createElement('tr');
   newList.setAttribute("class", "product")
   newList.innerHTML =   `<td class="name">
-                        <span>${inputText.value}</span>
+                          <span>${inputText.value}</span>
                         </td>
                         <td class="price">$<span>${inputPrice.value}</span></td>
                         <td class="quantity">
-                        <input type="number" value="0" min="0" placeholder="Quantity"/>
+                          <input type="number" value="0" min="0" placeholder="Quantity"/>
                         </td>
                         <td class="subtotal">$<span>0</span></td>
                         <td class="action">
-                        <button class="btn btn-remove">Remove</button>
+                          <button class="btn btn-remove">Remove</button>
                         </td>`;
+  let tbody = document.querySelector('tbody');
   tbody.appendChild(newList);
 
   inputText.value = ""
-  inputPrice.value = "0"
+  inputPrice.value = 0
 
   const removeBtn = document.querySelectorAll('.btn-remove');
   removeBtn.forEach((button) => {
