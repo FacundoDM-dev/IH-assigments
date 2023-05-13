@@ -29,7 +29,7 @@ const calculateAll = () => {
 
 // ITERATION 4
 
-function removeProduct(event) {
+const removeProduct = (event) => {
   const target = event.currentTarget.parentElement.parentElement;
   target.parentElement.removeChild(target);
   calculateAll(event);
@@ -37,7 +37,7 @@ function removeProduct(event) {
 
 // ITERATION 5
 
-function createProduct() {
+const createProduct = () => {
   let inputText = document.querySelector(".create-product input[type='text']");
   let inputPrice = document.querySelector(".create-product input[type='number']");
   let tbody = document.querySelector('tbody');
@@ -56,10 +56,13 @@ function createProduct() {
                         </td>`;
   tbody.appendChild(newList);
 
+  inputText.value = ""
+  inputPrice.value = "0"
+
   const removeBtn = document.querySelectorAll('.btn-remove');
   removeBtn.forEach((button) => {
   button.addEventListener('click', removeProduct);
-    
+  
   });
 }
 

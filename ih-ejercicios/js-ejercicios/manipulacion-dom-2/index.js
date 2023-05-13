@@ -11,7 +11,7 @@ let buttonTag = document.createElement("button");
 buttonTag.innerHTML = "Click Aqui";
 parentBody.appendChild(buttonTag);
 
-buttonTag.onclick = function () {
+buttonTag.onclick =  () => {
   let textActual = h1Tag.innerHTML;
   if (textActual == "Todavía no me han modificado")
     h1Tag.innerHTML = "Ya me han dado click!";
@@ -28,15 +28,15 @@ let h1TagOnOff = document.createElement("h1");
 h1TagOnOff.innerHTML = "OFF";
 parentBody.appendChild(h1TagOnOff);
 
-let buttonEncender = document.createElement("button");
-buttonEncender.innerHTML = "Enceder";
-parentBody.appendChild(buttonEncender);
+let buttonOnOff = document.createElement("button");
+buttonOnOff.innerHTML = "Enceder";
+parentBody.appendChild(buttonOnOff);
 
-buttonEncender.addEventListener("click", () => {
+buttonOnOff.addEventListener("click", () => {
   if (h1TagOnOff.innerHTML == "OFF") {
-    (h1TagOnOff.innerHTML = "ON"), (buttonEncender.innerHTML = "Apagar");
+    (h1TagOnOff.innerHTML = "ON"), (buttonOnOff.innerHTML = "Apagar");
   } else {
-    (h1TagOnOff.innerHTML = "OFF"), (buttonEncender.innerHTML = "Enceder");
+    (h1TagOnOff.innerHTML = "OFF"), (buttonOnOff.innerHTML = "Enceder");
   }
 });
 
@@ -66,19 +66,19 @@ buttonClickSuma.innerHTML = "Click Para Sumar";
 parentBody.appendChild(buttonClickSuma);
 
 buttonDobleClickResta.addEventListener("dblclick", () => {
-  h1TagContador.innerHTML = h1TagContador.innerHTML - 2;
+  h1TagContador.innerHTML = parseInt(h1TagContador.innerHTML) - 2;
 });
 
 buttonClickRestar.addEventListener("click", () => {
-  h1TagContador.innerHTML = h1TagContador.innerHTML - 1;
+  h1TagContador.innerHTML = parseInt(h1TagContador.innerHTML) - 1;
 });
 
 buttonClickSuma.addEventListener("click", () => {
-  h1TagContador.innerHTML = Number(h1TagContador.innerHTML) + 1;
+  h1TagContador.innerHTML = parseInt(h1TagContador.innerHTML) + 1;
 });
 
 buttonDobleClickSuma.addEventListener("dblclick", () => {
-  h1TagContador.innerHTML = Number(h1TagContador.innerHTML) + 2;
+  h1TagContador.innerHTML = parseInt(h1TagContador.innerHTML) + 2;
 });
 
 // Ejercicio 4. Class Toggle
