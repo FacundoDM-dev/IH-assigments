@@ -5,7 +5,7 @@
 function getInstruction(food, step, callback, errorCallback) {
     setTimeout(() => {
       // Get the instruction string
-      let instruction;
+      let instruction = "";
 
       if (food === "mashedPotatoes") {
         instruction = mashedPotatoes[step];
