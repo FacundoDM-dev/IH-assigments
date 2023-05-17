@@ -34,42 +34,20 @@ getInstruction(
     document.querySelector("#mashedPotatoes").innerHTML += `<li>${step1}</li>`;
     document.querySelector("#mashedPotatoesImg").removeAttribute("hidden");
 
-    getInstruction(
-      "mashedPotatoes",
-      1,
-      (step2) => {
-        document.querySelector(
-          "#mashedPotatoes"
-        ).innerHTML += `<li>${step2}</li>`;
+    getInstruction("mashedPotatoes", 1, (step2) => {
+        document.querySelector("#mashedPotatoes").innerHTML += `<li>${step2}</li>`;
 
-        getInstruction(
-          "mashedPotatoes",
-          2,
-          (step3) => {
-            document.querySelector(
-              "#mashedPotatoes"
-            ).innerHTML += `<li>${step3}</li>`;
+        getInstruction("mashedPotatoes", 2, (step3) => {
+            document.querySelector("#mashedPotatoes").innerHTML += `<li>${step3}</li>`;
 
-            getInstruction(
-              "mashedPotatoes",
-              3,
-              (step4) => {
-                document.querySelector(
-                  "#mashedPotatoes"
-                ).innerHTML += `<li>${step4}</li>`;
+            getInstruction("mashedPotatoes", 3, (step4) => {
+                document.querySelector("#mashedPotatoes").innerHTML += `<li>${step4}</li>`;
 
-                getInstruction(
-                  "mashedPotatoes",
-                  4,
-                  (step5) => {
-                    document.querySelector(
-                      "#mashedPotatoes"
-                    ).innerHTML += `<li>${step5}</li>`;
+                getInstruction("mashedPotatoes", 4, (step5) => {
+                    document.querySelector("#mashedPotatoes").innerHTML += `<li>${step5}</li>`;
 
                     setTimeout(() => {
-                      document.querySelector(
-                        "#mashedPotatoes"
-                      ).innerHTML += `<li>Mashed Potatoes are ready!!</li>`;
+                      document.querySelector("#mashedPotatoes").innerHTML += `<li>Mashed Potatoes are ready!!</li>`;
                     }, 1000);
                   },
                   (error) => console.log(error)
@@ -148,7 +126,9 @@ const makeBroccoli = async () => {
     const step6 = await obtainInstruction("broccoli", 6);
     document.querySelector("#broccoli").innerHTML += `<li>${step6}</li>`;
     setTimeout(() => {
-      document.querySelector("#broccoli").innerHTML += `<li>Broccoli is ready!!</li>`;
+      document.querySelector(
+        "#broccoli"
+      ).innerHTML += `<li>Broccoli is ready!!</li>`;
     }, 1000);
   } catch {
     (error) => console.log(error);
@@ -159,26 +139,24 @@ makeBroccoli();
 // Bonus 2 - Promise all
 // ...
 
-const step0 = obtainInstruction("brusselsSprouts", 0)
-const step1 = obtainInstruction("brusselsSprouts", 1)
-const step2 = obtainInstruction("brusselsSprouts", 2)
-const step3 = obtainInstruction("brusselsSprouts", 3)
-const step4 = obtainInstruction("brusselsSprouts", 4)
-const step5 = obtainInstruction("brusselsSprouts", 5)
-const step6 = obtainInstruction("brusselsSprouts", 6)
-const step7 = obtainInstruction("brusselsSprouts", 7)
-
-
+const step0 = obtainInstruction("brusselsSprouts", 0);
+const step1 = obtainInstruction("brusselsSprouts", 1);
+const step2 = obtainInstruction("brusselsSprouts", 2);
+const step3 = obtainInstruction("brusselsSprouts", 3);
+const step4 = obtainInstruction("brusselsSprouts", 4);
+const step5 = obtainInstruction("brusselsSprouts", 5);
+const step6 = obtainInstruction("brusselsSprouts", 6);
+const step7 = obtainInstruction("brusselsSprouts", 7);
 
 Promise.all([step0, step1, step2, step3, step4, step5, step6, step7])
-
 .then((steps) => {
   document.querySelector("#brusselsSproutsImg").removeAttribute("hidden");
   steps.forEach((step) => {
-    document.querySelector("#brusselsSprouts").innerHTML += `<li>${step}</li>`  
-  })
+    document.querySelector("#brusselsSprouts").innerHTML += `<li>${step}</li>`;
+  });
   setTimeout(() => {
-    document.querySelector("#brusselsSprouts").innerHTML += `<li>Brussels Sproutsis ready!!</li>`;
+    document.querySelector(
+      "#brusselsSprouts"
+    ).innerHTML += `<li>Brussels Sproutsis ready!!</li>`;
   }, 1000);
-
-})
+});
