@@ -39,27 +39,53 @@ function clearSplits() {
 }
 
 function setStopBtn() {
-  // ... your code goes here
+  btnLeftElement.removeAttribute('class', 'btn start');
+  btnLeftElement.setAttribute('class', 'btn stop');
+  btnLeftElement.innerText = 'STOP';
 }
 
 function setSplitBtn() {
-  // ... your code goes here
+  btnRightElement.removeAttribute('class', 'btn reset');
+  btnRightElement.setAttribute('class', 'btn split');
+  btnRightElement.innerText = 'SPLIT';
 }
 
 function setStartBtn() {
-  // ... your code goes here
+  btnLeftElement.removeAttribute('class', 'btn stop');
+  btnLeftElement.setAttribute('class', 'btn start');
+  btnLeftElement.innerText = 'START';
 }
 
 function setResetBtn() {
-  // ... your code goes here
+  btnRightElement.removeAttribute('class', 'btn split');
+  btnRightElement.setAttribute('class', 'btn reset');
+  btnRightElement.innerText = 'RESET';
 }
 
 // Start/Stop Button
 btnLeftElement.addEventListener('click', () => {
-  // ... your code goes here
+  //
+
+  if (btnLeftElement.innerText === 'START') {
+    setStopBtn();
+    setSplitBtn();
+    chronometer.start(() => {
+      let seconds = chronometer.getSeconds()
+      let twoDigitSec = chronometer.computeTwoDigitNumber(seconds)
+      secDecElement.innerText = twoDigitSec[0]
+      secUniElement.innerText = twoDigitSec[1]
+      let minutes = chronometer.getMinutes()
+      let twoDigitMin = chronometer.computeTwoDigitNumber(minutes)
+      minDecElement.innerText = twoDigitMin[0]
+      minUniElement.innerText = twoDigitMin[1]
+    });
+  } else {
+    setStartBtn();
+    setResetBtn();
+    chronometer.stop()
+  }
 });
 
 // Reset/Split Button
-btnRightElement.addEventListener('click', () => {
-  // ... your code goes here
-});
+btnRightElement.addEventListener('click', () => {});
+
