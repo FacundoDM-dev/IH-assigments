@@ -70,22 +70,21 @@ btnLeftElement.addEventListener('click', () => {
     setStopBtn();
     setSplitBtn();
     chronometer.start(() => {
-      let seconds = chronometer.getSeconds()
-      let twoDigitSec = chronometer.computeTwoDigitNumber(seconds)
-      secDecElement.innerText = twoDigitSec[0]
-      secUniElement.innerText = twoDigitSec[1]
-      let minutes = chronometer.getMinutes()
-      let twoDigitMin = chronometer.computeTwoDigitNumber(minutes)
-      minDecElement.innerText = twoDigitMin[0]
-      minUniElement.innerText = twoDigitMin[1]
+      let seconds = chronometer.getSeconds();
+      let twoDigitSec = chronometer.computeTwoDigitNumber(seconds);
+      secDecElement.innerText = twoDigitSec[0];
+      secUniElement.innerText = twoDigitSec[1];
+      let minutes = chronometer.getMinutes();
+      let twoDigitMin = chronometer.computeTwoDigitNumber(minutes);
+      minDecElement.innerText = twoDigitMin[0];
+      minUniElement.innerText = twoDigitMin[1];
     });
   } else {
     setStartBtn();
     setResetBtn();
-    chronometer.stop()
+    chronometer.stop();
   }
 });
 
 // Reset/Split Button
 btnRightElement.addEventListener('click', () => {});
-
