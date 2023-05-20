@@ -27,10 +27,7 @@
 
 // Iteration 1 - using callbacks
 
-getInstruction(
-  "mashedPotatoes",
-  0,
-  (step1) => {
+getInstruction("mashedPotatoes", 0, (step1) => {
     document.querySelector("#mashedPotatoes").innerHTML += `<li>${step1}</li>`;
     document.querySelector("#mashedPotatoesImg").removeAttribute("hidden");
 
@@ -102,7 +99,7 @@ obtainInstruction("steak", 0)
     setTimeout(() => {
       document.querySelector("#steak").innerHTML += `<li>Stake is ready!!</li>`;
     }, 1000);
-    return obtainInstruction("steak", 8);
+    
   })
   .catch((error) => console.log(error));
 
@@ -159,4 +156,7 @@ Promise.all([step0, step1, step2, step3, step4, step5, step6, step7])
       "#brusselsSprouts"
     ).innerHTML += `<li>Brussels Sproutsis ready!!</li>`;
   }, 1000);
-});
+}) .catch((error) => console.log(error));
+    
+
+

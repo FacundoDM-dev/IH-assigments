@@ -13,20 +13,20 @@ const milDecElement = document.getElementById('milDec');
 const milUniElement = document.getElementById('milUni');
 const splitsElement = document.getElementById('splits');
 
-function printTime() {
+const printTime = () => {
   printSeconds();
   printMinutes();
   // printMilliseconds()
 }
 
-function printMinutes() {
+const printMinutes = () => {
   let minutes = chronometer.getMinutes();
   let twoDigitMin = chronometer.computeTwoDigitNumber(minutes);
   minDecElement.innerText = twoDigitMin[0];
   minUniElement.innerText = twoDigitMin[1];
 }
 
-function printSeconds() {
+const printSeconds = () => {
   let seconds = chronometer.getSeconds();
   let twoDigitSec = chronometer.computeTwoDigitNumber(seconds);
   secDecElement.innerText = twoDigitSec[0];
@@ -41,36 +41,37 @@ function printSeconds() {
 //   milUniElement.innerText = twoDigitSec[1];
 // }
 
-function printSplit() {
-  let divSplit = document.createElement("div");
-  divSplit.setAttribute("class", "split")
+const printSplit = () => {
+  let divSplit = document.createElement("li");
   divSplit.innerText = chronometer.split();
   splitsElement.appendChild(divSplit);
 }
 
-function clearSplits() {
-  document.getElementsByClassName("split").remove()
+const clearSplits = () => {
+  document.querySelectorAll("li").forEach(element => {
+    element.remove()
+  }); 
 }
 
-function setStopBtn() {
+const setStopBtn = () => {
   btnLeftElement.removeAttribute('class', 'btn start');
   btnLeftElement.setAttribute('class', 'btn stop');
   btnLeftElement.innerText = 'STOP';
 }
 
-function setSplitBtn() {
+const setSplitBtn = () => {
   btnRightElement.removeAttribute('class', 'btn reset');
   btnRightElement.setAttribute('class', 'btn split');
   btnRightElement.innerText = 'SPLIT';
 }
 
-function setStartBtn() {
+const setStartBtn = () => {
   btnLeftElement.removeAttribute('class', 'btn stop');
   btnLeftElement.setAttribute('class', 'btn start');
   btnLeftElement.innerText = 'START';
 }
 
-function setResetBtn() {
+const setResetBtn = () => {
   btnRightElement.removeAttribute('class', 'btn split');
   btnRightElement.setAttribute('class', 'btn reset');
   btnRightElement.innerText = 'RESET';

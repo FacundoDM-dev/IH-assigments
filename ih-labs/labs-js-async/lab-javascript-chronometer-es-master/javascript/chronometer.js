@@ -12,7 +12,7 @@ class Chronometer {
         callback();
       }
     }, 1000);
-    console.log(this.currentTime);
+    // console.log(this.currentTime);
   }
 
   getMinutes() {
@@ -39,12 +39,12 @@ class Chronometer {
 
   stop() {
     clearInterval(this.intervalId);
-    console.log(this.currentTime);
+    // console.log(this.currentTime);
   }
 
   reset() {
     this.currentTime = 0;
-    console.log(this.currentTime);
+    // console.log(this.currentTime);
   }
 
   split() {
