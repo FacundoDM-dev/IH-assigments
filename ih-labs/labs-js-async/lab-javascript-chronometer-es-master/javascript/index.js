@@ -109,6 +109,5 @@ btnRightElement.addEventListener('click', () => {
   } else {
     printSplit();
     chronometer.split();
-    console.log();
   }
 });

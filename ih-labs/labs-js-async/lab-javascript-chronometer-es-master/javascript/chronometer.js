@@ -50,9 +50,7 @@ class Chronometer {
   split() {
     let minutes = chronometer.getMinutes();
     let seconds = chronometer.getSeconds();
-    return `${this.computeTwoDigitNumber(
-      minutes
-    )}:${this.computeTwoDigitNumber(seconds)}`;
+    return `${this.computeTwoDigitNumber(minutes)}:${this.computeTwoDigitNumber(seconds)}`;
   }
 }
 // The following is required to make unit tests work.
