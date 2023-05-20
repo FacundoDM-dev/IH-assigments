@@ -5,9 +5,9 @@ class Chronometer {
   }
 
   start(callback) {
-    const chronometer = this;
+    
     this.intervalId = setInterval(() => {
-      chronometer.currentTime++;
+      this.currentTime++;
       if (callback) {
         callback();
       }

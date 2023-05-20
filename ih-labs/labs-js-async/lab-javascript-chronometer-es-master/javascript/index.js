@@ -85,7 +85,7 @@ btnLeftElement.addEventListener('click', () => {
     setStopBtn();
     setSplitBtn();
     chronometer.start(() => {
-      printTime();
+    printTime();
     });
   } else {
     setStartBtn();
