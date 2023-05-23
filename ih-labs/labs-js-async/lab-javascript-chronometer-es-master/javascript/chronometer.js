@@ -24,7 +24,7 @@ class Chronometer {
   }
 
   // getMilliseconds() {
-  //   return this.currentTime * 60 * 1000;
+  //   return this.currentTime % 60;
   // }
 
   

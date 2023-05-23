@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto:wght@100;300;400;500&display=swap");
+
+:root {
+  --primary: #072ac8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f4fc;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* NAV styles */
+
+.nav-cont {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 150px 50px 150px;
+  align-items: center;
+}
+
+.nav-cont-ul {
+  display: flex;
+  list-style: none;
+  gap: 45px;
+}
+
+.nav-cont-ul li a {
+  text-decoration: none;
+}
+
+.nav-cont a {
+  text-decoration: none;
+}
+
+.nav-contact-us {
+  background-color: #072ac8;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* HEADER styles */
+
+.header-section {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  margin: 20px 150px 20px 150px;
+}
+
+.header-section-text {
+  width: 500px;
+}
+
+.header-section-img {
+  position: relative;
+}
+
+.header-section-img-card1 {
+  height: 270px;
+  position: absolute;
+  left: -40px;
+}
+.header-section-img-card2 {
+  height: 250px;
+  position: absolute;
+  bottom: -80px;
+  left: 300px;
+}
+
+.header-section-img-hero {
+  height: 500px;
+}
+
+.header-clients-logos-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 150px 100px 150px;
+}
+
+.rating-section {
+  background-color: #292e47;
+  background-image: url(../images/testimonial-section/orbit.png);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  margin: 100px 150px 100px 150px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-emoticons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-emoticons-1-2 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-left: 80px;
+}
+
+.rating-emoticons-3-4 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-right: 80px;
+}
+
+.rating-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.rating-text h3 {
+  text-align: center;
+  color: white;
+}
+
+.rating-text h4 {
+  text-align: center;
+  color: #ffc600;
+}
+
+.rate-sign {
+  display: flex;
+  align-items: center;
+}
+
+.rate-sign img {
+  width: 50px;
+  border-radius: 5%;
+}
+
+.services-section {
+  margin: 100px 200px 100px 200px;
+}
+
+.services-flex-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  gap: 20px;
+  height: 300px;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 1000px;
+  padding: 20px 20px 20px 20px;
+}
+
+.services img {
+  background-color: #ecf7ff;
+  border-radius: 100px;
+  width: 50px;
+  padding: 10px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------ INDEX html ------------------------------ */
+/* ------------------------------------------------------------------------ */
+
+/* ------------------------------ Splash page ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------ CIRCULAR ANIMATION ------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Navbar ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Header ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Partners ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Recent projects ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Client reviews ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Services ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Questions form ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Footer ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* -------------------------------------------------------------------------- */
+/* ------------------------------ PROJECT html ------------------------------ */
+/* -------------------------------------------------------------------------- */
+
+/* ------------------------------ Project main ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------ CONTACT-US html ------------------------------ */
+/* ----------------------------------------------------------------------------- */
+
+/* ------------------------------ Form ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------ About html ------------------------------ */
+/* ----------------------------------------------------------------------------- */
+
+/* Your CSS code goes here */
+
+/* --------------------------------------------------------------------------- */
+/* ------------------------------ MEDIA QUERIES ------------------------------ */
+/* --------------------------------------------------------------------------- */
+
+/* ------------------------- Smaller than 990px (tablet) ------------------------- */
+@media (max-width: 990px) {
+  /* Your CSS code goes here */
+}
+
+/* ------------------------- Smaller than 766px (mobile) ------------------------- */
+@media (max-width: 766px) {
+  /* Your CSS code goes here */
+}
+
+/* ------------------------------ Hamburguer menu ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Alert ------------------------------ */
+
+/* Your CSS code goes here */
+
+/* ------------------------------ Sticky scroll bar ------------------------------ */
+
+/* Your CSS code goes here */
