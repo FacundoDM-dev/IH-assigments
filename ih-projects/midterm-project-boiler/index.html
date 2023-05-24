@@ -11,19 +11,24 @@
     />
   </head>
   <body>
+
     <nav class="nav-cont">
-      <img
+      <a href="">
+        <img
         src="../midterm-project-boiler/resources/images/logos/circle.svg"
         alt="circle-logo"
       />
+      </a>
       <ul class="nav-cont-ul">
         <li><a href="">Home</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Services</a></li>
+        <li><a href="../midterm-project-boiler/project.html">Project Page - Simple</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
       </ul>
-      <a class="nav-contact-us" href="">Contact Us</a>
+      <a class="nav-contact-us" href="../midterm-project-boiler/contact-us.html">Contact Us</a>
     </nav>
-    <header>
+
+    <header id="header">
       <div class="header-section">
         <div class="header-section-text">
           <h1>Empower Your Business With Stunning Design!</h1>
@@ -73,28 +78,28 @@
       </div>
     </header>
 
-    <section class="projects-section">
+    <section id="projects" class="projects-section">
       <h3>Recent Projects</h3>
-      <div class="projects-flex-cont">
-        <div class="project-cont">
+      <div class="projects-flex-container">
+        <div class="project">
           <img src="../midterm-project-boiler/resources/images/projects-section/1.jpg" alt="">
-          <div class="project-cont-text">
+          <div id="project" class="project-cont-text">
             <h4>Simplify</h4>
             <p>UI Design & App Development</p>
           </div>
           <a href="">Learn more</a>
         </div>
-        <div class="project-cont">
+        <div class="project">
           <img src="../midterm-project-boiler/resources/images/projects-section/2.jpg" alt="">
-          <div class="project-cont-text">
+          <div id="project" class="project-cont-text">
             <h4>Simplify</h4>
             <p>UI Design & App Development</p>
           </div>
           <a href="">Learn more</a>
         </div>
-        <div class="project-cont">
+        <div class="project">
           <img src="../midterm-project-boiler/resources/images/projects-section/6.jpg" alt="">
-          <div class="project-cont-text">
+          <div id="project" class="project-cont-text">
             <h4>Simplify</h4>
             <p>UI Design & App Development</p>
           </div>
@@ -149,7 +154,7 @@
       
     </section>
 
-    <section class="services-section">
+    <section id="services" class="services-section">
       <h3>Our Services</h3>
       <div class="services-flex-container">
         <div class="services">
@@ -213,12 +218,13 @@
       </div>
       <div class="footer-cont-right">
         <a href="">Team</a>
-        <a href="">Services</a>
+        <a href="#services">Services</a>
         <a href="">About Us</a>
         <a href="">Press</a>
-        <a href="">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="">Privacy Policy</a>
       </div>
     </footer>
+    <script src="../midterm-project-boiler/resources/js/index.js"></script>
   </body>
 </html>
