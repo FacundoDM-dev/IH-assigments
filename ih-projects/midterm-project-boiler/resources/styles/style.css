@@ -35,7 +35,8 @@ h4 {
   font-weight: bold;
 }
 
-/* NAV styles */
+/* //////////////////////////////////////////////
+nav style */
 
 .nav-cont {
   display: flex;
@@ -52,6 +53,7 @@ h4 {
 
 .nav-cont-ul li a {
   text-decoration: none;
+  color: #072ac8;
 }
 
 .nav-cont a {
@@ -64,7 +66,8 @@ h4 {
   padding: 10px 20px;
 }
 
-/* HEADER styles */
+/* //////////////////////////////////////////////
+header style */
 
 .header-section {
   display: flex;
@@ -104,6 +107,10 @@ h4 {
   margin: 100px 150px 100px 150px;
 }
 
+
+/* //////////////////////////////////////////////
+rating style */
+
 .rating-section {
   background-color: #292e47;
   background-image: url(../images/testimonial-section/orbit.png);
@@ -111,10 +118,9 @@ h4 {
   background-size:contain;
   background-repeat: no-repeat;
   margin: 100px 150px 100px 150px;
-  height: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 50px 0px 50px 0px;
+  
+ 
 }
 
 .rating-emoticons {
@@ -160,22 +166,41 @@ h4 {
 .rate-sign {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
+
+.rate-sign h5 {
+  color: #A2D6F9;
+}
+
+.rate-sign h6 {
+  color: white;
+}
+
 
 .rate-sign img {
   width: 50px;
   border-radius: 5%;
 }
 
+
+
+/* //////////////////////////////////////////////
+services style */
+
 .services-section {
   margin: 100px 200px 100px 200px;
+}
+
+.services-section h3 {
+  padding-bottom: 60px;
 }
 
 .services-flex-container {
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  gap: 20px;
+  gap: 25px;
   height: 300px;
 }
 
@@ -193,6 +218,69 @@ h4 {
   border-radius: 100px;
   width: 50px;
   padding: 10px;
+}
+
+.services a{
+  text-decoration: none;
+  color: #072ac8;
+}
+
+/* //////////////////////////////////////////////
+help style */
+
+.help-section{
+  background-color: #FFC600;
+  margin: 100px 150px 100px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 100px 0px 100px 0px;
+}
+
+
+.help-input a{
+  background-color: #072ac8;
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px 12px 10px;
+  
+  
+}
+.help-input a:hover{
+  background-color: #062199;
+  color: white;
+  text-decoration: none;
+  padding: 8px 10px 12px 10px;
+}
+
+.help-input input{
+  border: 0px;
+  height: 40px;
+  text-align: center;
+}
+
+
+/* //////////////////////////////////////////////
+help style */
+
+.footer-section{
+  display: flex;
+  justify-content:space-between;
+  margin: 100px 200px 100px 200px;
+  
+}
+
+.footer-cont-right {
+  display: grid;
+  grid-template-columns: 120px 120px 70px;
+  gap: 50px;
+  
+}
+.footer-cont-right a {
+  font-size: 10px;
+  text-decoration: none;
+  color: #072ac8;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -267,13 +355,87 @@ h4 {
 
 /* ------------------------- Smaller than 990px (tablet) ------------------------- */
 @media (max-width: 990px) {
-  /* Your CSS code goes here */
+  .nav-cont {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 150px 50px 150px;
+    align-items: center;
+  }
+  
+  .nav-cont-ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+  }
+  
+  .nav-cont-ul li a {
+    text-decoration: none;
+  }
+  
+  .nav-cont a {
+    text-decoration: none;
+  }
+  
+  .nav-contact-us {
+    background-color: #072ac8;
+    color: white;
+    
+  }
+  .rating-emoticons-1-2 {
+    visibility: hidden;
+  }
+  
+  .rating-emoticons-3-4 {
+    visibility: hidden;
+  }
 }
+
+
 
 /* ------------------------- Smaller than 766px (mobile) ------------------------- */
 @media (max-width: 766px) {
-  /* Your CSS code goes here */
+  .nav-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    margin: 50px 150px 50px 150px;
+    align-items: center;
+  }
+
+
+
+
+  .header-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    margin: 20px 150px 20px 150px;
+  }
+
+  .header-clients-logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 100px 150px 100px 150px;
+  }
+
+
+
+  .rating-emoticons-1-2 {
+    visibility: hidden;
+  }
+  
+  .rating-emoticons-3-4 {
+    visibility: hidden;
+  }
 }
+
+
 
 /* ------------------------------ Hamburguer menu ------------------------------ */
 
