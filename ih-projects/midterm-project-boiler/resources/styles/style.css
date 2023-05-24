@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Roboto:wght@100;300;400;500&display=swap");
 
+/* -----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -------------
+GLOBAL STYLES
+------------- */
+
 :root {
   --primary: #072ac8;
 }
+
 
 * {
   margin: 0;
@@ -35,8 +42,13 @@ h4 {
   font-weight: bold;
 }
 
-/* //////////////////////////////////////////////
-nav style */
+/* -----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -------------
+INDEX STYLES
+------------- */
+
+/* NAV STYLE */
 
 .nav-cont {
   display: flex;
@@ -72,8 +84,8 @@ nav style */
   padding: 10px 20px;
 }
 
-/* //////////////////////////////////////////////
-header style */
+/* ----------------------------------------------------------------------------- */
+/* HEADER STYLE */
 
 .header-section {
   display: flex;
@@ -114,7 +126,14 @@ header style */
   background-color: #072ac8;
   color: white;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px 20px;
+}
+
+.color-back:hover {
+  background-color: #062199;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
 }
 
 .header-section-img {
@@ -139,12 +158,13 @@ header style */
 
 .header-clients-logos-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 150px;
   margin: 100px 150px 100px 150px;
 }
 
-/* //////////////////////////////////////////////
-projects style */
+/* ----------------------------------------------------------------------------- */
+/* PROJECT SECTION STYLE */
 
 .projects-section{
   padding: 100px 200px 100px 200px;
@@ -156,13 +176,12 @@ projects style */
 
 .projects-flex-container {
   display: flex;
-  justify-content: space-around ;  
+  justify-content: center ;  
   gap: 25px;
 
 }
 
 .project {
-  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -185,15 +204,8 @@ projects style */
 padding: 20px;
 }
 
-
-
-
-
-
-
-
-/* //////////////////////////////////////////////
-rating style */
+/* ----------------------------------------------------------------------------- */
+/* RATE SECTION STYLE */
 
 .rating-section {
   background-color: #292e47;
@@ -203,6 +215,7 @@ rating style */
   background-repeat: no-repeat;
   margin: 100px 150px 100px 150px;
   padding: 50px 0px 50px 0px;
+  
 }
 
 .rating-emoticons {
@@ -264,8 +277,8 @@ rating style */
   border-radius: 5%;
 }
 
-/* //////////////////////////////////////////////
-services style */
+/* ----------------------------------------------------------------------------- */
+/* SERVICES SECTION STYLE */
 
 .services-section {
   margin: 100px 200px 100px 200px;
@@ -277,7 +290,7 @@ services style */
 
 .services-flex-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 25px;
   height: 300px;
 }
@@ -302,8 +315,8 @@ services style */
   color: #072ac8;
 }
 
-/* //////////////////////////////////////////////
-help style */
+/* ----------------------------------------------------------------------------- */
+/* HELP SECTION STYLE */
 
 .help-section {
   background-color: #ffc600;
@@ -338,19 +351,20 @@ help style */
   text-align: center;
 }
 
-/* //////////////////////////////////////////////
-help style */
+/* ----------------------------------------------------------------------------- */
+/* FOOTER STYLE */
 
 .footer-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 400px;
   margin: 100px 200px 100px 200px;
 }
 
 .footer-cont-right {
   display: grid;
   grid-template-columns: 120px 120px 100px;
-  gap: 40px;
+  gap: 30px;
 }
 .footer-cont-right a {
   font-size: 15px;
@@ -358,71 +372,36 @@ help style */
   color: #072ac8;
 }
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------ INDEX html ------------------------------ */
-/* ------------------------------------------------------------------------ */
 
-/* ------------------------------ Splash page ------------------------------ */
+/* -----------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+/* -------------
+CONTACT US STYLES
+------------- */
 
-/* Your CSS code goes here */
+/* FORM SECTION STYLE */
+.contact-form{
+  margin: 100px 200px 100px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* ------ CIRCULAR ANIMATION ------ */
+.email-phone-form{
+  display: flex;
+  gap: 10px;
+}
 
-/* Your CSS code goes here */
+input{
+  background-color: #dfe1eb;
+  border: none;
+  height: 50px;
+  width: 700px;
 
-/* ------------------------------ Navbar ------------------------------ */
+}
 
-/* Your CSS code goes here */
 
-/* ------------------------------ Header ------------------------------ */
 
-/* Your CSS code goes here */
-
-/* ------------------------------ Partners ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* ------------------------------ Recent projects ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* ------------------------------ Client reviews ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* ------------------------------ Services ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* ------------------------------ Questions form ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* ------------------------------ Footer ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* -------------------------------------------------------------------------- */
-/* ------------------------------ PROJECT html ------------------------------ */
-/* -------------------------------------------------------------------------- */
-
-/* ------------------------------ Project main ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* ----------------------------------------------------------------------------- */
-/* ------------------------------ CONTACT-US html ------------------------------ */
-/* ----------------------------------------------------------------------------- */
-
-/* ------------------------------ Form ------------------------------ */
-
-/* Your CSS code goes here */
-
-/* ----------------------------------------------------------------------------- */
-/* ------------------------------ About html ------------------------------ */
-/* ----------------------------------------------------------------------------- */
-
-/* Your CSS code goes here */
 
 /* --------------------------------------------------------------------------- */
 /* ------------------------------ MEDIA QUERIES ------------------------------ */
@@ -493,6 +472,14 @@ help style */
     margin: 100px 150px 100px 150px;
   }
 
+  .projects-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; ;  
+    gap: 25px;
+  
+  }
+
   .rating-emoticons-1-2 {
     visibility: hidden;
   }
@@ -510,8 +497,9 @@ help style */
   }
   .footer-section {
     display: flex;
-    justify-content: space-between;
-    margin: 100px 200px 100px 200px;
+    justify-content: center;
+    gap: 50px;
+    
   }
 
   .footer-cont-right {
@@ -520,7 +508,6 @@ help style */
     gap: 10px;
   }
   .footer-cont-right a {
-    text-align: right;
     font-size: 10px;
     text-decoration: none;
     color: #072ac8;
