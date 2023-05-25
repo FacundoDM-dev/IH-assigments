@@ -12,6 +12,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -75,6 +78,45 @@ h4 {
   
 }
 
+/* --------------------------------------------------------------- */
+/* BTN SCROLL STYLES - NAV ======================================> */
+
+.scroll-top-btn{
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vh;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #ffc600;
+  border: none;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+.scroll-top-btn:hover{
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vh;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #292E47;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
 
 /* --------------------------------------------------------------- */
 /* INDEX STYLES - NAV ===========================================> */
