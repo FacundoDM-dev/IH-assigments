@@ -1,11 +1,8 @@
 /* ------------------------- Smaller than 766px (mobile) ------------------------- */
 @media (max-width: 990px) {
 
-  /* -----------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-  /* -------------
-GLOBAL STYLES
-------------- */
+/* --------------------------------------------------------------- */
+/* GLOBAL STYLES ================================================> */
 
   :root {
     --primary: #072ac8;
@@ -42,11 +39,9 @@ GLOBAL STYLES
     font-weight: bold;
   }
 
-  /* -----------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-  /* -------------
-NAV STYLES
-------------- */
+  /*-------------------------------------------------------------- */
+  /* INDEX STYLES - NAV =========================================> */
+
 
   .nav-cont {
     display: flex;
@@ -73,11 +68,7 @@ NAV STYLES
     color: white;
   }
 
-  /* -----------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-  /* -------------
-HEADER STYLES
-------------- */
+  /* INDEX STYLES - HEADER =========================================> */
 
   .header-section {
     display: flex;
@@ -103,11 +94,7 @@ HEADER STYLES
     margin: 100px 150px 100px 150px;
   }
 
-    /* -----------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-  /* -------------
-PROJECTS STYLES
-------------- */
+/* INDEX STYLES - PROJECTS =========================================> */
 
   .projects-flex-container {
     display: flex;
@@ -116,11 +103,7 @@ PROJECTS STYLES
     gap: 25px;
   }
 
-      /* -----------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-  /* -------------
-RATING STYLES
-------------- */
+ /* INDEX STYLES - RATING =========================================> */
 
   .rating-emoticons-1-2 {
     visibility: hidden;
@@ -130,11 +113,7 @@ RATING STYLES
     visibility: hidden;
   }
 
-      /* -----------------------------------------------------------------------------
------------------------------------------------------------------------------ */
-  /* -------------
-PFOOTER STYLES
-------------- */
+/* INDEX STYLES - FOOTER =========================================> */
 
   .footer-section {
     display: flex;
@@ -154,10 +133,11 @@ PFOOTER STYLES
   }
 }
 
+/* --------------------------------------------------------------- */
+
 @media (max-width: 766px) {
-  /* -------------
-    INDEX STYLES
-    ------------- */
+
+    /* INDEX STYLES - NAV =========================================> */
 
   .nav-cont {
     display: flex;
@@ -172,6 +152,8 @@ PFOOTER STYLES
     text-decoration: none;
     font-size: 8px;
   }
+
+/* INDEX STYLES - HEADER =========================================> */
 
   .header-section {
     display: flex;
@@ -191,11 +173,13 @@ PFOOTER STYLES
     margin: 100px 150px 100px 150px;
   }
 
-  .projects-section{
-    padding: 20px 200px 20px 200px; 
+/* INDEX STYLES - PROJECTS =========================================> */
+
+  .projects-section {
+    padding: 20px 200px 20px 200px;
   }
 
-  .projects-section h3{
+  .projects-section h3 {
     padding-bottom: 20px;
     text-align: center;
   }
@@ -206,6 +190,8 @@ PFOOTER STYLES
     justify-content: space-between;
     gap: 25px;
   }
+
+/* INDEX STYLES - RATING =========================================> */
 
   .rating-emoticons-1-2 {
     visibility: hidden;
@@ -220,8 +206,21 @@ PFOOTER STYLES
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 25px;
-    margin-bottom: 550px;
+    margin-bottom: 380px;
   }
+
+  .help-section {
+    background-color: #ffc600;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 0px 50px 0px;
+  }
+
+/* INDEX STYLES - FOOTER =========================================> */
+
   .footer-section {
     display: flex;
     justify-content: center;
@@ -239,14 +238,13 @@ PFOOTER STYLES
     color: #072ac8;
   }
 
-  /* -------------
-    CONTACT US STYLES
-    ------------- */
+/* --------------------------------------------------------------- */
+/* CONTACT STYLES - NAV =========================================> */
 
   .email-phone-form div {
     display: flex;
     flex-direction: column;
-    width: 49.5%;
+    width: 100%;
   }
 
   .email-phone-form {
