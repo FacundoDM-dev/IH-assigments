@@ -7,7 +7,6 @@
   --primary: #072ac8;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +55,12 @@ h4 {
 }
 
 .nav-cont-ul li a {
+  font-weight: 500;
   text-decoration: none;
+  color: #6b708d;
+}
+
+.nav-cont-ul li a:hover {
   color: #072ac8;
 }
 
@@ -111,7 +115,14 @@ h4 {
 
 .color-back-less {
   text-decoration: none;
+  font-weight: 500;
   color: #072ac8;
+}
+
+.color-back-less:hover {
+  text-decoration: none;
+  font-weight: 500;
+  color: #292e47;
 }
 
 .color-back {
@@ -157,18 +168,18 @@ h4 {
 
 /* INDEX STYLES - PROJECTS =========================================> */
 
-.projects-section{
+.projects-section {
   padding: 100px 200px 100px 200px;
-  
 }
 
-.projects-section h3{
+.projects-section h3 {
   padding-bottom: 60px;
+  color: #292e47;
 }
 
 .projects-flex-container {
   display: flex;
-  justify-content: center ;  
+  justify-content: center;
   gap: 25px;
 }
 
@@ -177,27 +188,23 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
-  
-  
 }
 
 .project img {
   width: 300px;
   box-sizing: content-box;
   width: 100%;
-  
 }
 
-.project a{
+.project a {
   padding: 50px 0px 40px 20px;
   color: #072ac8;
   text-decoration: none;
-  
 }
 
-.project-cont-text{
-  
-padding: 20px;
+.project-cont-text {
+  padding: 20px;
+  color: #292E47
 }
 
 /* INDEX STYLES - RATING =========================================> */
@@ -210,7 +217,6 @@ padding: 20px;
   background-repeat: no-repeat;
   margin: 100px 150px 100px 150px;
   padding: 50px 0px 50px 0px;
-  
 }
 
 .rating-emoticons {
@@ -246,11 +252,13 @@ padding: 20px;
 .rating-text h3 {
   text-align: center;
   color: white;
+  font-size: 35px;
 }
 
 .rating-text h4 {
   text-align: center;
   color: #ffc600;
+  font-weight: 400;
 }
 
 .rate-sign {
@@ -261,10 +269,13 @@ padding: 20px;
 
 .rate-sign h5 {
   color: #a2d6f9;
+  font-weight: 400;
+  
 }
 
 .rate-sign h6 {
   color: white;
+  font-weight: 200;
 }
 
 .rate-sign img {
@@ -276,11 +287,11 @@ padding: 20px;
 
 .services-section {
   margin: 100px 200px 100px 200px;
-  
 }
 
 .services-section h3 {
   padding-bottom: 60px;
+  color: #292E47
 }
 
 .services-flex-container {
@@ -296,6 +307,7 @@ padding: 20px;
   justify-content: space-between;
   background-color: white;
   padding: 20px 20px 20px 20px;
+  color: #292E47
 }
 
 .services img {
@@ -303,6 +315,7 @@ padding: 20px;
   border-radius: 100px;
   width: 50px;
   padding: 10px;
+  
 }
 
 .services a {
@@ -320,6 +333,7 @@ padding: 20px;
   align-items: center;
   gap: 30px;
   padding: 100px 0px 100px 0px;
+  color: #292E47
 }
 
 .help-section h3 {
@@ -341,13 +355,16 @@ padding: 20px;
   border: none;
   width: 100px;
   height: 40px;
-  
 }
 
 .help-input input {
   border: 0px;
   height: 40px;
-  text-align: center;
+  width: 400px;
+  background-image: url(../images/newsletter/icon/mail.svg);
+  background-repeat: no-repeat;
+  background-position: 5px;
+  padding-left: 40px;  
 }
 
 /* INDEX STYLES - FOOTER =========================================> */
@@ -357,6 +374,11 @@ padding: 20px;
   justify-content: center;
   gap: 400px;
   margin: 100px 200px 100px 200px;
+  color: #292E47
+}
+
+.footer-cont-left img{
+  padding-bottom: 10px;
 }
 
 .footer-cont-right {
@@ -369,30 +391,33 @@ padding: 20px;
   text-decoration: none;
   color: #072ac8;
 }
-
+.footer-cont-right a:hover {
+  font-size: 15px;
+  text-decoration: none;
+  color: #292E47
+}
 
 /* --------------------------------------------------------------- */
 /* CONTACT-US STYLES - FORM ==========================================> */
 
-.container-section-form{
+.container-section-form {
   margin: 100px 200px 100px 200px;
 }
 
-.container-form h1{
+.container-form h1 {
   margin-bottom: 50px;
 }
 
-
-.container-flex-form{
+.container-flex-form {
   display: flex;
   flex-direction: column;
 }
 
-.container-flex-form label{
+.container-flex-form label {
   padding-bottom: 15px;
 }
 
-.container-flex-form input{
+.container-flex-form input {
   height: 70px;
   background-color: #dddfed;
   border: none;
@@ -400,7 +425,7 @@ padding: 20px;
   padding-left: 10px;
 }
 
-.container-flex-form textarea{
+.container-flex-form textarea {
   height: 300px;
   background-color: #dddfed;
   border: none;
@@ -408,57 +433,54 @@ padding: 20px;
   padding-top: 20px;
 }
 
-.email-phone-form{
+.email-phone-form {
   display: flex;
   justify-content: space-between;
 }
 
-.email-phone-form div{
+.email-phone-form div {
   display: flex;
   flex-direction: column;
   width: 49.5%;
 }
 
-.container-flex-form button{
+.container-flex-form button {
   background-color: #072ac8;
   border: none;
   color: white;
   height: 65px;
 }
 
-.container-flex-form button:hover{
-  background-color:#062199;
+.container-flex-form button:hover {
+  background-color: #062199;
   border: none;
   color: white;
   height: 65px;
 }
 
-
-
 /* --------------------------------------------------------------- */
 /* PROYECTS STYLES - POST ==========================================> */
 
-.project-post{
+.project-post {
   margin: 100px 150px 100px 150px;
   display: flex;
   flex-direction: column;
 }
 
-.project-post h1{
+.project-post h1 {
   margin-bottom: 30px;
 }
 
-.project-post p{
-font-size: 20px;
-line-height: 30px;
+.project-post p {
+  font-size: 20px;
+  line-height: 30px;
 }
-.project-post-title-date{
+.project-post-title-date {
   display: flex;
   justify-content: space-between;
-
 }
 
-.project-post-title-date h4{
+.project-post-title-date h4 {
   margin-bottom: 60px;
 }
 
