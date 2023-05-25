@@ -33,35 +33,30 @@
       >
     </nav>
 
-    <section class="contact-form">
-      <h1>Contact Us</h1>
-
-      <div class="fullname-form">
-        <h5>Full Name *</h5>
-        <input type="text" placeholder="Enter your full name" />
-      </div>
-
-      <div class="email-phone-form">
+    <section class="container-section-form">
+      <div class="container-form">
+        <h1>Contact Us</h1>
         <div>
-          <h5>Email</h5>
-          <input type="text" placeholder="Enter your email" />
-        </div>
-        <div>
-          <h5>Phone</h5>
-          <input type="text" placeholder="Enter your phone" />
+          <form class="container-flex-form">
+            <label for="name">Full Name *</label>
+            <input id="name" type="text" placeholder="Enter your full name*" required/>
+            <div class="email-phone-form">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="text" placeholder="Enter your email" />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" type="text" placeholder="Enter your phone" />
+              </div>
+            </div>
+            <label for="text-messaage">Message *</label>
+            <textarea id="text-messaage" cols="134" rows="15" placeholder="  Write you text message here..." required></textarea>
+            <button type="submit">Submit</button>  
+          </form>
         </div>
       </div>
 
-      <div class="message-form">
-        <h5>Message</h5>
-        <textarea
-          name=""
-          id=""
-          cols="100"
-          rows="10"
-          placeholder="Write you text message here..."
-        ></textarea>
-      </div>
     </section>
 
     <footer class="footer-section">

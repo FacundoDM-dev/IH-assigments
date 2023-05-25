@@ -332,17 +332,22 @@ padding: 20px;
   text-align: center;
 }
 
-.help-input a {
+.help-input button {
   background-color: #072ac8;
   color: white;
   text-decoration: none;
-  padding: 8px 10px 12px 10px;
+  border: none;
+  width: 100px;
+  height: 40px;
 }
-.help-input a:hover {
+.help-input button:hover {
   background-color: #062199;
   color: white;
   text-decoration: none;
-  padding: 8px 10px 12px 10px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  
 }
 
 .help-input input {
@@ -380,27 +385,65 @@ CONTACT US STYLES
 ------------- */
 
 /* FORM SECTION STYLE */
-.contact-form{
+
+.container-section-form{
   margin: 100px 200px 100px 200px;
+}
+
+.container-form h1{
+  margin-bottom: 50px;
+}
+
+
+.container-flex-form{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.container-flex-form label{
+  padding-bottom: 15px;
+}
+
+.container-flex-form input{
+  height: 70px;
+  background-color: #dddfed;
+  border: none;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.container-flex-form textarea{
+  height: 300px;
+  background-color: #dddfed;
+  border: none;
+  margin-bottom: 15px;
+  padding-top: 20px;
 }
 
 .email-phone-form{
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
 }
 
-input{
-  background-color: #dfe1eb;
+.email-phone-form div{
+  display: flex;
+  flex-direction: column;
+  width: 49.5%;
+}
+
+.container-flex-form button{
+  background-color: #072ac8;
   border: none;
-  height: 50px;
-  width: 700px;
-
+  color: white;
+  height: 65px;
 }
 
-
+.container-flex-form button:hover{
+  background-color:#062199;
+  border: none;
+  color: white;
+  height: 65px;
+}
 
 
 /* --------------------------------------------------------------------------- */
@@ -409,6 +452,11 @@ input{
 
 /* ------------------------- Smaller than 990px (tablet) ------------------------- */
 @media (max-width: 990px) {
+
+  /* -------------
+INDEX STYLES
+------------- */
+
   .nav-cont {
     display: flex;
     justify-content: space-between;
@@ -445,6 +493,12 @@ input{
 
 /* ------------------------- Smaller than 766px (mobile) ------------------------- */
 @media (max-width: 766px) {
+
+  /* -------------
+  INDEX STYLES
+  ------------- */
+
+
   .nav-cont {
     display: flex;
     justify-content: space-between;
@@ -511,6 +565,23 @@ input{
     font-size: 10px;
     text-decoration: none;
     color: #072ac8;
+  }
+
+
+  /* -------------
+  CONTACT US STYLES
+  ------------- */
+
+  .email-phone-form div{
+    display: flex;
+    flex-direction: column;
+    width: 49.5%;
+  }
+
+  .email-phone-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
