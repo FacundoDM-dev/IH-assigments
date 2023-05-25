@@ -95,7 +95,11 @@ h4 {
   border: none;
   cursor: pointer;
   transition: all .2s ease-out;
+  text-align: center;
+  color: #292E47;
+  text-decoration: none;
 }
+
 
 .scroll-top-btn:hover{
   position: fixed;
@@ -107,10 +111,10 @@ h4 {
   border-radius: 50%;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #292E47;
-  color: white;
+  background-color:  #292E47;
   border: none;
-  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .hidden{
