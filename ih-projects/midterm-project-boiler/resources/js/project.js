@@ -1,21 +1,44 @@
 /* Crea tu propia lógica para hacer fetch de un post y enseñar su información utilizando DOM manipulation */
 /* ADVANCED: consigue que la info del post funcione dinámicamente y enseñe un post u otro según la URL */
+window.onload = () => {
+    setTimeout(() => {
+      const contenedor = document.querySelector(".body-load");
+      contenedor.style.visibility = "hidden";
+      contenedor.style.opacity = "0";
+    }, 1000);
+  };
 
-let projectArray = document.querySelectorAll(".project-cont-text");
-let projectData = fetch("https://jsonplaceholder.typicode.com/posts")
+let project = document.querySelector(".project-post")
+let imgPost = document.querySelector(".img-container")
+
+let projects = document.querySelectorAll(".project-cont-text");
+let img = document.querySelectorAll(".project")
+
+let projectsFetch = fetch("https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects")
   
 .then((res) => res.json()).then((res) => {
   
-    projectArray[0].querySelector("h4").innerText = res[2].title;
-    projectArray[0].querySelector("p").innerText = res[2].body;
+    projects[0].querySelector("h4").innerText = res[1].name;
+    projects[0].querySelector("p").innerText = res[1].description;
+    
  
 
-    projectArray[1].querySelector("h4").innerText = res[9].title;
-    projectArray[1].querySelector("p").innerText = res[9].body;
+    projects[1].querySelector("h4").innerText = res[2].name;
+    projects[1].querySelector("p").innerText = res[2].description;
+    img[1].querySelector("img").src = res[2].image;
   
 
-    projectArray[2].querySelector("h4").innerText = res[6].title;
-    projectArray[2].querySelector("p").innerText = res[6].body;
+    projects[2].querySelector("h4").innerText = res[3].name;
+    projects[2].querySelector("p").innerText = res[3].description;
+    img[2].querySelector("img").src = res[3].image;
+
+    project.querySelector("h1").innerText = res[3].name;
+    project.querySelector("h4").innerText = res[3].description;
+    project.querySelector("p").innerHTML = res[3].content;
  
 
 }).catch((err) => console.log(err))
+
+
+
+
