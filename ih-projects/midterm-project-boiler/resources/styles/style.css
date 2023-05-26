@@ -83,21 +83,20 @@ h4 {
 
 .scroll-top-btn{
   position: fixed;
+  background-image: url(../images/scroll-top/scroll-top.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   z-index: 999;
   bottom: 1vh;
   right: 1vh;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  font-size: 2rem;
-  font-weight: bold;
   background-color: #ffc600;
   border: none;
   cursor: pointer;
   transition: all .2s ease-out;
-  text-align: center;
   color: #292E47;
-  text-decoration: none;
 }
 
 
@@ -106,15 +105,13 @@ h4 {
   z-index: 999;
   bottom: 1vh;
   right: 1vh;
-  width: 3rem;
-  height: 3rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  box-shadow: #6b708d87 1px 3px 4px;
   border-radius: 50%;
-  font-size: 2rem;
-  font-weight: bold;
-  background-color:  #292E47;
+  background-color:  #ffc600;
   border: none;
   color: #ffffff;
-  text-decoration: none;
 }
 
 .hidden{

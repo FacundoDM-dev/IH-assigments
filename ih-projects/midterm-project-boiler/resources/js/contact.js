@@ -8,3 +8,4 @@ window.onload = () => {
       contenedor.style.opacity = "0";
     }, 1000);
   };
+  
