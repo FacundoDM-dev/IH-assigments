@@ -1,3 +1,5 @@
+// LOADER ==========================>
+
 window.onload = () => {
     setTimeout(() => {
       const contenedor = document.querySelector(".body-load");
@@ -5,6 +7,9 @@ window.onload = () => {
       contenedor.style.opacity = "0";
     }, 1000);
   };
+
+
+// SCROLL TOP ======================>
 
 const d = document;
 const w = window;
