@@ -1,13 +1,5 @@
 /* Crea tu propia lógica para hacer fetch de 3 posts distintos y enseñarlos en la homepage con DOM manipulation */
 
-window.onload = () => {
-  setTimeout(() => {
-    const contenedor = document.querySelector(".body-load");
-    contenedor.style.visibility = "hidden";
-    contenedor.style.opacity = "0";
-  }, 1000);
-};
-
 let projectArray = document.querySelectorAll(".project-cont-text");
 let projectData = fetch("https://jsonplaceholder.typicode.com/posts")
   .then((res) => res.json())

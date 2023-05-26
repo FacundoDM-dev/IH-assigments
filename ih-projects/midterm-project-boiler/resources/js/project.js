@@ -1,12 +1,5 @@
 /* Crea tu propia lógica para hacer fetch de un post y enseñar su información utilizando DOM manipulation */
 /* ADVANCED: consigue que la info del post funcione dinámicamente y enseñe un post u otro según la URL */
-window.onload = () => {
-    setTimeout(() => {
-      const contenedor = document.querySelector(".body-load");
-      contenedor.style.visibility = "hidden";
-      contenedor.style.opacity = "0";
-    }, 1000);
-  };
 
 let project = document.querySelector(".project-post")
 let imgPost = document.querySelector(".img-container")

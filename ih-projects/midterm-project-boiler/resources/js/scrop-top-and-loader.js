@@ -1,3 +1,11 @@
+window.onload = () => {
+    setTimeout(() => {
+      const contenedor = document.querySelector(".body-load");
+      contenedor.style.visibility = "hidden";
+      contenedor.style.opacity = "0";
+    }, 1000);
+  };
+
 const d = document;
 const w = window;
 
