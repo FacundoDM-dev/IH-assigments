@@ -44,8 +44,10 @@
 
 
   .nav-cont {
-    display: flex;
-    justify-content: space-between;
+    background-color: #ffc600;
+    gap: 50px;
+    margin: 0px 0px 70px 0px;
+    padding: 30px;
   }
 
   .nav-cont-ul {
@@ -55,9 +57,9 @@
   }
 
   .nav-cont-ul li a {
-    text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
   }
+
 
   .nav-cont a {
     text-decoration: none;
@@ -160,17 +162,14 @@
     /* INDEX STYLES - NAV =========================================> */
 
   .nav-cont {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 10px;
-    margin: 50px 150px 50px 150px;
-    align-items: center;
+    background-color: #ffc600;
+    gap: 50px;
+    margin: 0px 0px 70px 0px;
+    padding: 30px;
   }
 
   .nav-cont-ul li a {
-    text-decoration: none;
-    font-size: 8px;
+    font-size: 15px;
   }
 
 /* INDEX STYLES - HEADER =========================================> */
