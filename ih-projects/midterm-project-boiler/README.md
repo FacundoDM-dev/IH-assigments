@@ -96,7 +96,9 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Roadmap
+## Roadmap trello
+
+https://trello.com/b/jJgFOvmf/midterm-ironhack-main
 
 #### Backlog
 
