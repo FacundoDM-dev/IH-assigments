@@ -168,6 +168,15 @@
 
 
 
+//   const maxOfThreeNumbers = (a, b, c) => {
+//     return Math.max(a, b, c);
+// }
+
+
+
+
+
+
 
 //   Calcular la suma de una matriz de números
 // Contexto
@@ -214,6 +223,17 @@
 //    let numeros = [1,2,3,8,9,4,5]
 //    sumArray(numeros)
 
+// //    --------------------------
+
+// function sumArray(numbers) {
+//     let sum = 0;
+  
+//     for (let i = 0; i < numbers.length; i++) {
+//       sum += numbers[i];
+//     }
+    
+//     return sum;
+//   }
 
 
 
