@@ -52,3 +52,14 @@
     color: rgb(0, 0, 0);
     font-weight: 700;
 }
+
+.button-blue{
+    background-color: blue;
+    border: none;
+    padding: 50px 50px;
+
+}
+
+.button-red{
+background-color: red;
+}

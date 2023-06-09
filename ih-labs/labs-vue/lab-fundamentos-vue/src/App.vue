@@ -1,33 +1,24 @@
 <script setup>
-import NavBarApp from './components/nav-bar-app.vue';
-import FooterApp from './components/footer-app.vue';
-import HeaderAppHome from './components/header-app.vue';
-
-import { toRefs, reactive, defineComponent } from "vue";
-const state = reactive({
-  count: 0,
-});
-const increaseCount = () => {
-  state.count++;
-};
-
+import NavBarApp from "./components/nav-bar-app.vue";
+import Iteracion2 from "./components/iteracion-2.vue";
+import Iteracion3 from "./components/iteracion-3.vue";
+import Iteracion4 from "./components/iteracion-4.vue";
+import FooterApp from "./components/footer-app.vue";
+import Bono from "./components/bono.vue";
 </script>
 
 <template>
-
-<NavBarApp/>
-
-<HeaderAppHome/>
-
-<FooterApp/>
-
-<button @click="increaseCount">count is: {{ state.count }}</button>
-
+  <NavBarApp />
+  <br>
+  <Iteracion2 />
+  <br>
+  <Iteracion3 />
+  <br>
+  <Iteracion4 />
+  <br>
+  <Bono/>
+  <br>
+  <FooterApp />
 </template>
 
-<style scoped>
-
-</style>
-
-
-
+<style scoped></style>
