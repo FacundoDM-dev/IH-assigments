@@ -7,9 +7,11 @@ const colorChange = () => {
 
 </script>
 
-<template>
+<template >
 
-    <button class="button-blue" @click="colorChange()">Click para cambiar de color!</button>
+    <div class="container-button">
+        <button class="button-blue" @click="colorChange()">Click para cambiar de color!</button>
+    </div>
     
 </template>
 

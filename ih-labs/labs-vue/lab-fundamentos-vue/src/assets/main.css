@@ -1,65 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-.nav-bar{
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #32373d;
+}
+
+.nav-bar img {
+  height: 50px;
+}
+
+.nav-bar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color: white;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dom-calculate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.function-string {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
-    background-color: #32373d;
-}
+    justify-content: center;
+  }
 
-.nav-bar img{
-    height: 50px;   
-}
-
-
-.nav-bar ul{
-    display: flex; 
-    gap: 20px;
-    list-style: none;
-}
-
-.nav-bar li a{
-    text-decoration: none;
-    color: white;
-}
-
-
-.footer{
+.boolean-variable{
     display: flex;
     justify-content: center;
+    background-color: rgb(255, 243, 22);
+    color: #32373d;
+    padding: 50px;
+}
+
+.list-music-band{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #32373d;
+    padding: 50px;
+}
+
+.list-music-band li{
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
-
-
-.footer ul{
-    display: flex; 
-    gap: 20px;
+    gap: 15px;
+    color: white;
+    text-align:center;
     list-style: none;
+    width: 200px;
+    background-color: #1d2024;
+    padding: 30px;
+    border-radius: 20px;
 }
 
-.footer li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: 700;
+
+.list-music-band li h2{
+    font-weight: 200;
+    line-height: 95%;
+}
+
+.list-music-band li h3{
+    font-weight: 200;
+}
+
+.list-music-band li h4{
+    font-weight: 200;
+}
+
+.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .button-blue{
-    background-color: blue;
+    background-color: rgb(255, 243, 22);
     border: none;
-    padding: 50px 50px;
+    padding: 20px 20px;
+    transition: all .3s ease;
+    border-radius: 20px;
+  }
+  
+  .button-red {
+    background-color: #32373d;
+    color: white;
+  }
+  
 
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px 50px 0px;
 }
 
-.button-red{
-background-color: red;
+.footer ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
+
+.footer li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
