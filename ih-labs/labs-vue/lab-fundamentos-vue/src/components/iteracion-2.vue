@@ -26,16 +26,16 @@ const stringFunction = () => {
 <template>
   <div class="counter">
     <h2>{{ counter.title }}</h2>
-    <h2>{{ counter.count }}</h2>
     <button @click="plus">+</button>
+    <h2>{{ counter.count }}</h2>
     <button @click="rest">-</button>
   </div>
-  <br />
+  
   <div class="dom-calculate">
     <h2>Suma directa en el HTML con mustache sintax === { { 2+2 } }</h2>
   <h1>{{ 2 + 2 }}</h1>
   </div>
-  <br />
+  
   <div class="function-string">
     <h2>{{ stringFunction() }}</h2>
   </div>

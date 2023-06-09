@@ -9,15 +9,15 @@ import Bono from "./components/bono.vue";
 
 <template>
   <NavBarApp />
-  <br>
+
   <Iteracion2 />
-  <br>
+
   <Iteracion3 />
-  <br>
+
   <Iteracion4 />
-  <br>
-  <Bono/>
-  <br>
+
+  <Bono />
+
   <FooterApp />
 </template>
 

@@ -35,12 +35,29 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  background-color:  rgb(255, 243, 22);
+  padding: 50px;
 }
+
+.counter h2 {
+    font-weight: 500;
+  }
+
+.counter button {
+    background-color: #32373d;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+  }
 
 .dom-calculate {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1d2024;
+  color: rgb(255, 243, 22);;
+  padding: 50px;
   gap: 20px;
 }
 
@@ -48,6 +65,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:#32373d;
+  color: white;
+  padding: 50px;
   }
 
 .boolean-variable{
