@@ -35,104 +35,115 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  background-color:  rgb(255, 243, 22);
+  background-color: rgb(255, 243, 22);
   padding: 50px;
 }
 
 .counter h2 {
-    font-weight: 500;
-  }
+  font-weight: 500;
+}
 
 .counter button {
-    background-color: #32373d;
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-  }
+  background-color: #32373d;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
 
 .dom-calculate {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #1d2024;
-  color: rgb(255, 243, 22);;
+  color: rgb(255, 243, 22);
   padding: 50px;
   gap: 20px;
 }
 
+.dom-calculate h2{
+    text-align: center;
+}
+
 .function-string {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:#32373d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #32373d;
   color: white;
   padding: 50px;
-  }
-
-.boolean-variable{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 243, 22);
-    color: #32373d;
-    padding: 50px;
 }
 
-.list-music-band{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    background-color: #32373d;
-    padding: 50px;
+.function-string h2{
+    text-align: center;
 }
 
-.list-music-band li{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    color: white;
-    text-align:center;
-    list-style: none;
-    width: 200px;
-    background-color: #1d2024;
-    padding: 30px;
-    border-radius: 20px;
+.boolean-variable {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 243, 22);
+  color: #32373d;
+  padding: 50px;
 }
 
-
-.list-music-band li h2{
-    font-weight: 200;
-    line-height: 95%;
+.boolean-variable h2 {
+    text-align: center;
 }
 
-.list-music-band li h3{
-    font-weight: 200;
+.list-music-band {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  background-color: #32373d;
+  padding: 50px;
 }
 
-.list-music-band li h4{
-    font-weight: 200;
+.list-music-band li {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+  text-align: center;
+  list-style: none;
+  width: 200px;
+  background-color: #1d2024;
+  padding: 30px;
+  border-radius: 20px;
 }
 
-.container-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
+.list-music-band li h2 {
+  font-weight: 200;
+  line-height: 95%;
 }
 
-.button-blue{
-    background-color: rgb(255, 243, 22);
-    border: none;
-    padding: 20px 20px;
-    transition: all .3s ease;
-    border-radius: 20px;
-  }
-  
-  .button-red {
-    background-color: #32373d;
-    color: white;
-  }
-  
+.list-music-band li h3 {
+  font-weight: 200;
+}
+
+.list-music-band li h4 {
+  font-weight: 200;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.button-blue {
+  background-color: rgb(255, 243, 22);
+  border: none;
+  padding: 20px 20px;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.button-red {
+  background-color: #32373d;
+  color: white;
+}
 
 .footer {
   display: flex;
@@ -154,3 +165,6 @@
   font-weight: 700;
 }
 
+.footer p {
+  text-align: center;
+}
