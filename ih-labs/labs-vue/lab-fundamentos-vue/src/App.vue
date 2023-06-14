@@ -8,17 +8,19 @@ import Bono from "./components/bono.vue";
 </script>
 
 <template>
+<div>
   <NavBarApp />
 
-  <Iteracion2 />
+<Iteracion2 />
 
-  <Iteracion3 />
+<Iteracion3 />
 
-  <Iteracion4 />
+<Iteracion4 />
 
-  <Bono />
+<Bono />
 
-  <FooterApp />
+<FooterApp />
+</div>
 </template>
 
 <style scoped></style>
