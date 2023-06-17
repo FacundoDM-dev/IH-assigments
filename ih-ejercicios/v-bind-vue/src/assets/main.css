@@ -1,0 +1,20 @@
+#idBind{
+  color: red;
+}
+
+.green-color{
+  color: green;
+}
+
+.visibility-hidden{
+  display: none;
+}
+
+
+.color-red{
+  color: red;
+}
+
+.line{
+  text-decoration: underline;
+}
