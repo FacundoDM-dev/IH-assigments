@@ -4,7 +4,7 @@
   import { ref, reactive } from 'vue';
   import Tweet from './components/Tweet.vue';
 
-  const tweets = ref([
+  const tweets = reactive([
     {
       user: {
         name: "Thoughts of Dog®",
