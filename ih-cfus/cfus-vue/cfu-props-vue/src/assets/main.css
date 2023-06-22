@@ -1,0 +1,19 @@
+:root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+.canine__image{
+  width: 50%;
+}
+
+.green{
+  background-color: green;
+}
+
+.background{
+  background-color: yellow;
+}
