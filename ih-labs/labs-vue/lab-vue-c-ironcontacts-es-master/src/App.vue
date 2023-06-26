@@ -31,7 +31,7 @@
         <tbody>
           <tr
             class="text-center"
-            v-for="contact in contacts.slice(0, 5)"
+            v-for="contact in contactsArray"
             :key="contact.id"
           >
             <td>
@@ -69,15 +69,23 @@
 </template>
 
 <script setup>
-import { ref, reactive } from "vue";
+import { ref, reactive, computed, onMounted } from "vue";
 
 // Importar directamente un archivo JSON
 // ----------------------------------------
 
 import ContactData from "./contacts.json";
 
-let contacts = ref(ContactData);
-console.log(contacts);
+
+const contacts = ref(ContactData);
+const contactsArray = ref([]);
+
+onMounted(() => {
+  contactsArray.value = contacts.value.slice(0, 5);
+});
+
+console.log(contactsArray.value);
+console.log(contacts.value);
 
 // ----------------------------------------
 
@@ -99,23 +107,27 @@ console.log(contacts);
 // };
 // fetchData();
 
+
+
 const addRandomContact = () => {
   const randomIndex = Math.floor(Math.random() * contacts.value.length);
   const randomContact = contacts.value[randomIndex];
-  contacts.value = [randomContact, ...contacts.value];
+  contactsArray.value = [randomContact, ...contactsArray.value];
 };
 
 const sortContact = () => {
-  contacts.value.sort((a, b) => a.name.localeCompare(b.name));
+  contactsArray.value.sort((a, b) => a.name.localeCompare(b.name));
 };
 
 const sortScore = () => {
-  contacts.value.sort((a, b) => b.popularity - a.popularity);
+  contactsArray.value.sort((a, b) => b.popularity - a.popularity);
 };
 
 const deleteContact = (id) => {
-  contacts.value = contacts.value.filter((contact) => contact.id !== id);
+  contactsArray.value = contactsArray.value.filter((contact) => contact.id !== id);
 };
+
+
 
 // ----------------------------------------
 </script>
