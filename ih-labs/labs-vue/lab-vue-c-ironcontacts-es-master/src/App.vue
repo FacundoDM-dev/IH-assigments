@@ -29,7 +29,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr
+          <tr v-if="loading == true">
+            Loading...
+          </tr>
+          <tr v-else
             class="text-center"
             v-for="contact in contactsArray"
             :key="contact.id"
@@ -42,21 +45,21 @@
                 :alt="contact.name"
               />
             </td>
-            <td v-text="contact.name"></td>
-            <td v-text="contact.popularity.toFixed(2)"></td>
-            <td>
+            <td class=" align-middle" v-text="contact.name"></td>
+            <td class=" align-middle" v-text="contact.popularity.toFixed(2)"></td>
+            <td class=" align-middle">
               <span v-if="contact.wonOscar"
                 ><i class="fa-solid fa-award fa-beat-fade fa-2xl"></i
               ></span>
               <span v-else>-----</span>
             </td>
-            <td>
+            <td class=" align-middle">
               <span v-if="contact.wonEmmy"
                 ><i class="fa-solid fa-trophy fa-2xl"></i
               ></span>
               <span v-else>-----</span>
             </td>
-            <td>
+            <td class=" align-middle">
               <button class="btn btn-danger" @click="deleteContact(contact.id)">
                 Delete
               </button>
@@ -74,44 +77,52 @@ import { ref, reactive, computed, onMounted } from "vue";
 // Importar directamente un archivo JSON
 // ----------------------------------------
 
-import ContactData from "./contacts.json";
-
-
-const contacts = ref(ContactData);
-const contactsArray = ref([]);
-
-onMounted(() => {
-  contactsArray.value = contacts.value.slice(0, 5);
-});
-
-console.log(contactsArray.value);
-console.log(contacts.value);
+// import ContactData from "./contacts.json";
+// const contacts = ref(ContactData);
 
 // ----------------------------------------
+
 
 // MirageJs localserver de un archivo JSON
 // ----------------------------------------
 
-// let contacts = ref([]);
+const contacts = ref([]);
+const contactsArray = ref([]);
+const loading = ref(true)
 
-// console.log(contacts);
+const computedContacts = computed(() => {
+  const contactIds = contactsArray.value.map((contact) => contact.id);
+  const remaining = contacts.value.filter((contact) => !contactIds.includes(contact.id));
+  return remaining;
+});
 
-// const fetchData = async () => {
-//   try {
-//     const response = await fetch("/api/contacts");
-//     const data = await response.json();
-//     contacts.value = data.contactsServer;
-//   } catch (error) {
-//     console.log("error request: ", error);
-//   }
-// };
-// fetchData();
+
+
+const fetchData = async () => {
+  try {
+    const response = await fetch("/api/contacts");
+    const data = await response.json();
+    loading.value = false
+    contacts.value = data.contactsServer;
+    // console.log(contacts.value);
+  } catch (error) {
+    console.log("error request: ", error);
+  }
+};
+
+
+onMounted(async () => {
+  await fetchData();
+  contactsArray.value = contacts.value.slice(0, 5);
+  console.log(contactsArray.value);
+});
+
 
 
 
 const addRandomContact = () => {
-  const randomIndex = Math.floor(Math.random() * contacts.value.length);
-  const randomContact = contacts.value[randomIndex];
+  const randomIndex = Math.floor(Math.random() * computedContacts.value.length);
+  const randomContact = computedContacts.value[randomIndex];
   contactsArray.value = [randomContact, ...contactsArray.value];
 };
 
