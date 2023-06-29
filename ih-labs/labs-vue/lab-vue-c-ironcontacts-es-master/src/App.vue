@@ -121,9 +121,14 @@ onMounted(async () => {
 
 
 const addRandomContact = () => {
-  const randomIndex = Math.floor(Math.random() * computedContacts.value.length);
-  const randomContact = computedContacts.value[randomIndex];
-  contactsArray.value = [randomContact, ...contactsArray.value];
+  if(computedContacts.value.length > 0) {
+    const randomIndex = Math.floor(Math.random() * computedContacts.value.length);
+    const randomContact = computedContacts.value[randomIndex];
+    contactsArray.value = [randomContact, ...contactsArray.value];
+  } else {
+    alert("Sorry, no more contacts available!")
+  }
+  
 };
 
 const sortContact = () => {

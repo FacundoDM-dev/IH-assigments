@@ -1,19 +1,29 @@
-import { defineStore, createPinia } from "pinia";
-import axios from "axios";
+import { ref, computed, watch } from "vue";
+import { useRoute } from "vue-router";
+import { defineStore } from "pinia";
 
-export const useStore = createPinia();
+export const useCountriesStore = defineStore("countries", () => {
+  const countrysObject = ref(null);
 
-export const useCountryStore = defineStore("countryStore", {
-  state: () => ({
-      countries: [],
-      currentCountryCode: null,
-    }),
+  const countries = async () => {
+    try {
+      const response = await fetch(
+        "https://ih-countries-api.herokuapp.com/countries"
+      );
 
-  actions: {
-    async loadCountries() {
-      const response = await axios.get("../../public/countries.json");
-      this.countries = response.data;
-      console.log(countries.$id);
-    },
-  },
+      const data = await response.json();
+
+      const sortedCountries = data.sort((a, b) =>
+        a.name.common.localeCompare(b.name.common)
+      );
+
+      countrysObject.value = sortedCountries;
+    } catch (error) {
+      console.log("error request: ", error);
+    }
+  };
+
+  countries();
+
+  return { countrysObject };
 });
