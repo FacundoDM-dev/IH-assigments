@@ -1,10 +1,10 @@
 <template>
-  <div class="d-flex">
+  <div class="row">
     <div
       class="container col-4 border"
-      style="overflow-y: scroll; height: 80vh"
+      style="overflow-y: scroll; height: 70vh"
     >
-      <div class="row">
+      <div >
         <div
           v-for="country in store.countrysObject"
           :key="country"
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="border">
+    <div class="border col-8 p-5">
       <RouterView  />
     </div>
   </div>

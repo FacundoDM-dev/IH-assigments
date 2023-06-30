@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class=" col-10">
     <div>
       <img
         :src="`https://flagcdn.com/w320/${countryDetails.alpha2Code.toLowerCase()}.png`"
@@ -21,11 +21,11 @@
           <tr>
             <td>Borders</td>
             <td>
-              <ul v-for="border in countryDetails.borders" :key="border">
-                <li>
+              <div v-for="border in countryDetails.borders" :key="border">
+                <p>
                   <RouterLink :to="`/list/${border}`">{{ border }}</RouterLink>
-                </li>
-              </ul>
+                </p>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -42,7 +42,7 @@ const countryDetails = ref(null);
 
 const route = useRoute();
 
-const recibirAlphaTresCode = async () => {
+const fetchAlpha2Code = async () => {
   const alpha3code = route.params.alpha3Code;
 
   const response = await fetch(
@@ -54,12 +54,12 @@ const recibirAlphaTresCode = async () => {
   countryDetails.value = data;
 };
 
-recibirAlphaTresCode();
+fetchAlpha2Code();
 
 const countryCode = computed(() => route.params.alpha3Code);
 
 watch(countryCode, () => {
-  recibirAlphaTresCode();
+  fetchAlpha2Code();
 });
 </script>
 
