@@ -61,6 +61,7 @@ const countryCode = computed(() => route.params.alpha3Code);
 watch(countryCode, () => {
   fetchAlpha2Code();
 });
+
 </script>
 
 <style lang="scss" scoped></style>
