@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="border col-8 p-5">
+    <div class="border col-8 p-5" style="overflow-y: scroll; height: 70vh">
       <RouterView  />
     </div>
   </div>

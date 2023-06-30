@@ -1,7 +1,7 @@
 <template>
   <div class=" col-10">
     <div>
-      <img
+      <img class=" border"
         :src="`https://flagcdn.com/w320/${countryDetails.alpha2Code.toLowerCase()}.png`"
         alt="country flag"
         style="width: 100px"
@@ -38,7 +38,7 @@
 import { ref, computed, watch, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
-const countryDetails = ref(null);
+const countryDetails = ref([]);
 
 const route = useRoute();
 
@@ -64,4 +64,4 @@ watch(countryCode, () => {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
